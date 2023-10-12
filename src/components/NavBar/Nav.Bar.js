@@ -4,12 +4,10 @@ export const NavBarWrap = styled.div`
   .NavBar {
     display: flex;
     justify-content: space-between;
-    height: 4rem;
-    /* background-color: lightgrey; */
     position: fixed;
+    background-color: white;
     top: 0;
     width: 100%;
-    z-index: 2;
 
     & > h1 {
       display: flex;

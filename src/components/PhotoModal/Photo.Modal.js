@@ -9,7 +9,6 @@ export const PhotoModalWrap = styled.div`
     top: 64px;
     bottom: 0;
     left: 0;
-    right: 0;
 
     & > .photo-modal {
       display: flex;
@@ -17,7 +16,6 @@ export const PhotoModalWrap = styled.div`
       height: 100%;
       width: 100%;
       margin: 0 auto;
-      z-index: 1;
 
       & > .photo {
         border: 5px solid black;
