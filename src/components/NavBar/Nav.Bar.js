@@ -5,7 +5,11 @@ export const NavBarWrap = styled.div`
     display: flex;
     justify-content: space-between;
     height: 4rem;
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 
     & > h1 {
       display: flex;
@@ -30,7 +34,7 @@ export const NavBarWrap = styled.div`
       & > .selected {
         text-decoration: none;
         margin-right: 1rem;
-        color: white;
+        color: grey;
         letter-spacing: 0.2rem;
       }
     }

@@ -35,7 +35,7 @@ export const PhotoModalWrap = styled.div`
 
       & > .photo {
         border: 5px solid black;
-        margin: 5rem;
+        margin: 2rem 0 6rem 0;
         background-color: white;
       }
     }

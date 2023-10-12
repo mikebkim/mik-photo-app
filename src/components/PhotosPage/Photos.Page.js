@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const PhotosPageWrap = styled.div`
   .PhotosPage {
+    margin-top: 5rem;
+
     & > .all-photos {
       display: flex;
       width: 10rem;
