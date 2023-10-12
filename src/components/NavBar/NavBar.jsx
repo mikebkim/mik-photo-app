@@ -28,9 +28,7 @@ const NavBar = (props) => {
         </Link>
         <Link
           to="/contact"
-          className={
-            selectedTab.includes("contact") ? "selected" : "nav-link"
-          }
+          className={selectedTab.includes("contact") ? "selected" : "nav-link"}
         >
           Contact
         </Link>

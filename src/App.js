@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
+  // Navigate,
 } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
+import HomePage from "./components/HomePage/HomePage";
 
 const App = () => {
   return (
@@ -13,8 +14,7 @@ const App = () => {
       <Router>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Navigate replace to="/home" />} />
-          <Route exact path="/home" />
+          <Route exact path="/home" element={<HomePage />} />
         </Routes>
       </Router>
     </div>
