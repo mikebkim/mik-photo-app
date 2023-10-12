@@ -4,6 +4,7 @@ export const PhotosPageWrap = styled.div`
   .PhotosPage {
     & > .all-photos {
       display: flex;
+      width: 10rem;
       margin: 1rem;
 
       & > .photo {

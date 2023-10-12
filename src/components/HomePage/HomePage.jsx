@@ -7,12 +7,10 @@ const HomePage = () => {
     <HomePageWrap>
       <div className="HomePage">
         <div className="header">
-          <img className="main-image" src={placeholder} />
+          <img className="main-image" src={placeholder} alt="placeholder" />
         </div>
 
-        <div className="home">
-          Welcome!
-        </div>
+        <div className="home">Welcome!</div>
       </div>
     </HomePageWrap>
   );

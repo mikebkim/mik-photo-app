@@ -1,20 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
+// import React, { useState } from "react";
 import { PhotosPageWrap } from "./Photos.Page";
 import photospageplaceholder from "./photospageplaceholder.png";
 
 const PhotosPage = () => {
-  const [allPhotos, setAllPhotos] = useState([photospageplaceholder]);
+  // const [allPhotos, setAllPhotos] = useState([photospageplaceholder]);
+
+  const allPhotos = [photospageplaceholder];
 
   return (
     <PhotosPageWrap>
       <div className="PhotosPage">
         <div className="all-photos">
           {allPhotos.map((photo) => {
-            return (
-              <div className="photo">
-                <img src={photo} />
-              </div>
-            );
+            return <img className="photo" src={photo} alt="placeholder" />;
           })}
         </div>
       </div>
