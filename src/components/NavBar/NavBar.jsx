@@ -14,28 +14,27 @@ const NavBar = (props) => {
   return (
     <NavBarWrap>
       <div className="NavBar">
-        <h1>Seanna Kim</h1>
+        <h1>SEANNA KIM</h1>
         <div className="nav-links">
           <Link
             to="/home"
-            // className={selectedTab.includes("home") ? "selected" : "nav-link"}
-            className="nav-link"
+            className={selectedTab.includes("home") ? "selected" : "nav-link"}
           >
-            Home
+            HOME
           </Link>
           <Link
             to="/photos"
-            // className={selectedTab.includes("photos") ? "selected" : "nav-link"}
-            className="nav-link"
+            className={selectedTab.includes("photos") ? "selected" : "nav-link"}
           >
-            Photos
+            PHOTOS
           </Link>
           <Link
             to="/contact"
-            // className={selectedTab.includes("contact") ? "selected" : "nav-link"}
-            className="nav-link"
+            className={
+              selectedTab.includes("contact") ? "selected" : "nav-link"
+            }
           >
-            Contact
+            CONTACT
           </Link>
         </div>
       </div>

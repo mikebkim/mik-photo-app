@@ -11,6 +11,8 @@ export const NavBarWrap = styled.div`
       display: flex;
       align-items: center;
       margin-left: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.2rem;
     }
 
     & > .nav-links {
@@ -22,11 +24,15 @@ export const NavBarWrap = styled.div`
         text-decoration: none;
         margin-right: 1rem;
         color: black;
+        letter-spacing: 0.2rem;
       }
-    }
 
-    & > .selected {
-      text-decoration: none;
+      & > .selected {
+        text-decoration: none;
+        margin-right: 1rem;
+        color: white;
+        letter-spacing: 0.2rem;
+      }
     }
   }
 `;
