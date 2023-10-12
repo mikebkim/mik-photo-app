@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const PhotoModalWrap = styled.div`
   .PhotoModal {
     position: absolute;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
     height: 100%;
     width: 100%;
-    top: 0;
+    top: 64px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -31,10 +31,12 @@ export const PhotoModalWrap = styled.div`
       height: 100%;
       width: 100%;
       margin: 0 auto;
+      z-index: 1;
 
       & > .photo {
         border: 5px solid black;
         margin: 5rem;
+        background-color: white;
       }
     }
   }

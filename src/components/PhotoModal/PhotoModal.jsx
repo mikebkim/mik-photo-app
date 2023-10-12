@@ -14,7 +14,7 @@ const PhotoModal = ({ photo, setOpenPhotoModal }) => {
           <img className="photo" src={photo} />
         </div>
         <div className="close-modal" onClick={() => handleCloseModal()}>
-          x
+          {/* x */}
         </div>
       </div>
     </PhotoModalWrap>
