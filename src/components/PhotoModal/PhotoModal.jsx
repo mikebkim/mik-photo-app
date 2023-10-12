@@ -12,9 +12,9 @@ const PhotoModal = ({ photo, setOpenPhotoModal }) => {
       <div className="PhotoModal">
         <div className="photo-modal">
           <img className="photo" src={photo} />
-          <div className="close-modal" onClick={() => handleCloseModal()}>
-            X
-          </div>
+        </div>
+        <div className="close-modal" onClick={() => handleCloseModal()}>
+          x
         </div>
       </div>
     </PhotoModalWrap>
