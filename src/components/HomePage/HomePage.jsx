@@ -10,7 +10,9 @@ const HomePage = () => {
           <img className="main-image" src={placeholder} />
         </div>
 
-        <div className="home"></div>
+        <div className="home">
+          Welcome!
+        </div>
       </div>
     </HomePageWrap>
   );
