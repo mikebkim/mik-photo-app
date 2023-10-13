@@ -16,13 +16,13 @@ const PhotoModal = ({ selectedPhoto, setOpenPhotoModal }) => {
     };
     window.addEventListener("keydown", close);
     return () => window.removeEventListener("keydown", close);
-  }, []);
+  });
 
   return (
     <PhotoModalWrap>
       <div className="PhotoModal">
         <div className="photo-modal">
-          <img className="photo-pop" src={selectedPhoto} />
+          <img className="photo-pop" alt={selectedPhoto} src={selectedPhoto} />
           <div className="close-modal">
             <FontAwesomeIcon
               className="close-icon"

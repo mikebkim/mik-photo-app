@@ -1,21 +1,17 @@
 import React, { useState } from "react";
 import { PhotosPageWrap } from "./Photos.Page";
 import PhotoModal from "../PhotoModal/PhotoModal";
-// import photospageplaceholder from "./AllPhotos/photospageplaceholder.png";
-// import mario from "./AllPhotos/mario.png";
-// import pikachu from "./AllPhotos/pikachu.png";
 
 const PhotosPage = ({ allImages }) => {
-  // const [allPhotos, setAllPhotos] = useState([photospageplaceholder]);
   const [openPhotoModal, setOpenPhotoModal] = useState(false);
   const handleOpenPhotoModal = (photoData) => {
     setOpenPhotoModal(!openPhotoModal);
     setSelectedPhoto(photoData);
   };
 
-  const [selectedPhoto, setSelectedPhoto] = useState(null);
-
   const allPhotos = Object.entries(allImages);
+
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   return (
     <PhotosPageWrap>
@@ -28,6 +24,7 @@ const PhotosPage = ({ allImages }) => {
                 <img
                   className="photo"
                   src={photoData}
+                  alt={photo[0]}
                   onClick={() => handleOpenPhotoModal(photoData)}
                 />
                 {openPhotoModal ? (
