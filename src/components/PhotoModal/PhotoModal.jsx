@@ -21,6 +21,9 @@ const PhotoModal = ({ selectedPhoto, setOpenPhotoModal }) => {
       <div className="PhotoModal">
         <div className="photo-modal">
           <img className="photo-pop" src={selectedPhoto} />
+          <div className="close-modal" onClick={() => handleCloseModal()}>
+            CLOSE
+          </div>
         </div>
       </div>
     </PhotoModalWrap>
