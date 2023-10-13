@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { PhotoModalWrap } from "./Photo.Modal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
 
 const PhotoModal = ({ selectedPhoto, setOpenPhotoModal }) => {
   const handleCloseModal = () => {
@@ -21,8 +23,12 @@ const PhotoModal = ({ selectedPhoto, setOpenPhotoModal }) => {
       <div className="PhotoModal">
         <div className="photo-modal">
           <img className="photo-pop" src={selectedPhoto} />
-          <div className="close-modal" onClick={() => handleCloseModal()}>
-            CLOSE
+          <div className="close-modal">
+            <FontAwesomeIcon
+              className="close-icon"
+              icon={faClose}
+              onClick={() => handleCloseModal()}
+            />
           </div>
         </div>
       </div>

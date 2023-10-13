@@ -31,12 +31,15 @@ export const PhotoModalWrap = styled.div`
         color: red;
         font-weight: 500;
         font-size: 1.2rem;
-        cursor: pointer;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         z-index: 0;
+
+        & > .close-icon {
+          cursor: pointer;
+        }
       }
     }
   }
