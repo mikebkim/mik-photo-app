@@ -1,31 +1,42 @@
 import React, { useState } from "react";
 import { PhotosPageWrap } from "./Photos.Page";
 import PhotoModal from "../PhotoModal/PhotoModal";
-import photospageplaceholder from "./photospageplaceholder.png";
+// import photospageplaceholder from "./AllPhotos/photospageplaceholder.png";
+// import mario from "./AllPhotos/mario.png";
+// import pikachu from "./AllPhotos/pikachu.png";
 
-const PhotosPage = () => {
+const PhotosPage = ({ allImages }) => {
   // const [allPhotos, setAllPhotos] = useState([photospageplaceholder]);
   const [openPhotoModal, setOpenPhotoModal] = useState(false);
-  const handleOpenPhotoModal = () => {
+  const handleOpenPhotoModal = (photo) => {
     setOpenPhotoModal(!openPhotoModal);
+    setSelectedPhoto(photo);
   };
 
-  const allPhotos = [photospageplaceholder];
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
+
+  const allPhotos = Object.entries(allImages);
 
   return (
     <PhotosPageWrap>
       <div className="PhotosPage">
         <div className="all-photos">
-          {allPhotos.map((photo) => {
+          {allPhotos.map((photo, index) => {
             return (
               <React.Fragment>
                 <img
                   className="photo"
-                  src={photo}
-                  alt="placeholder"
-                  onClick={() => handleOpenPhotoModal()}
+                  src={photo[1]}
+                  onClick={() => handleOpenPhotoModal(photo)}
                 />
-                {openPhotoModal ? <PhotoModal photo={photo} setOpenPhotoModal={setOpenPhotoModal} /> : ""}
+                {openPhotoModal ? (
+                  <PhotoModal
+                    photo={selectedPhoto}
+                    setOpenPhotoModal={setOpenPhotoModal}
+                  />
+                ) : (
+                  ""
+                )}
               </React.Fragment>
             );
           })}

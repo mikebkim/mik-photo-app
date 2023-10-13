@@ -6,11 +6,15 @@ export const PhotosPageWrap = styled.div`
 
     & > .all-photos {
       display: flex;
-      width: 10rem;
-      margin: 1rem;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
 
       & > .photo {
         border: 5px solid black;
+        width: 15rem;
+        height: 15rem;
+        margin: 1rem;
       }
     }
   }

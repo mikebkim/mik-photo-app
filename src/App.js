@@ -10,6 +10,18 @@ import HomePage from "./components/HomePage/HomePage";
 import PhotosPage from "./components/PhotosPage/PhotosPage";
 
 const App = () => {
+  function importAll(r) {
+    let images = {};
+    r.keys().forEach((item, index) => {
+      images[item.replace("./", "")] = r(item);
+    });
+    return images;
+  }
+
+  const allImages = importAll(
+    require.context("./images", false, /\.(png|jpe?g|svg)$/)
+  );
+
   return (
     <div className="App">
       <Router>
@@ -17,7 +29,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Navigate replace to="/home" />} />
           <Route exact path="/home" element={<HomePage />} />
-          <Route exact path="/photos" element={<PhotosPage />} />
+          <Route
+            exact
+            path="/photos"
+            element={<PhotosPage allImages={allImages} />}
+          />
         </Routes>
       </Router>
     </div>

@@ -20,7 +20,7 @@ const PhotoModal = ({ photo, setOpenPhotoModal }) => {
     <PhotoModalWrap>
       <div className="PhotoModal">
         <div className="photo-modal">
-          <img className="photo" src={photo} />
+          <img className="photo-pop" src={photo[1]} />
         </div>
       </div>
     </PhotoModalWrap>
