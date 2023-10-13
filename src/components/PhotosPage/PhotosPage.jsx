@@ -8,9 +8,9 @@ import PhotoModal from "../PhotoModal/PhotoModal";
 const PhotosPage = ({ allImages }) => {
   // const [allPhotos, setAllPhotos] = useState([photospageplaceholder]);
   const [openPhotoModal, setOpenPhotoModal] = useState(false);
-  const handleOpenPhotoModal = (photo) => {
+  const handleOpenPhotoModal = (photoData) => {
     setOpenPhotoModal(!openPhotoModal);
-    setSelectedPhoto(photo);
+    setSelectedPhoto(photoData);
   };
 
   const [selectedPhoto, setSelectedPhoto] = useState(null);
@@ -21,17 +21,18 @@ const PhotosPage = ({ allImages }) => {
     <PhotosPageWrap>
       <div className="PhotosPage">
         <div className="all-photos">
-          {allPhotos.map((photo, index) => {
+          {allPhotos.map((photo) => {
+            const photoData = photo[1];
             return (
               <React.Fragment>
                 <img
                   className="photo"
-                  src={photo[1]}
-                  onClick={() => handleOpenPhotoModal(photo)}
+                  src={photoData}
+                  onClick={() => handleOpenPhotoModal(photoData)}
                 />
                 {openPhotoModal ? (
                   <PhotoModal
-                    photo={selectedPhoto}
+                    selectedPhoto={selectedPhoto}
                     setOpenPhotoModal={setOpenPhotoModal}
                   />
                 ) : (

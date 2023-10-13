@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { PhotoModalWrap } from "./Photo.Modal";
 
-const PhotoModal = ({ photo, setOpenPhotoModal }) => {
+const PhotoModal = ({ selectedPhoto, setOpenPhotoModal }) => {
   const handleCloseModal = () => {
     setOpenPhotoModal(false);
   };
@@ -20,7 +20,7 @@ const PhotoModal = ({ photo, setOpenPhotoModal }) => {
     <PhotoModalWrap>
       <div className="PhotoModal">
         <div className="photo-modal">
-          <img className="photo-pop" src={photo[1]} />
+          <img className="photo-pop" src={selectedPhoto} />
         </div>
       </div>
     </PhotoModalWrap>
