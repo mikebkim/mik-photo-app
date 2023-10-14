@@ -7,8 +7,16 @@ export const HomePageWrap = styled.div`
     & > .header {
       & > .main-image {
         width: 100%;
-        height: 100%;
+        max-height: 30rem;
+        object-fit: cover;
       }
+    }
+
+    & > .home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
     }
   }
 `;
