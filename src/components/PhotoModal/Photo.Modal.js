@@ -47,7 +47,6 @@ export const PhotoModalWrap = styled.div`
         margin: 0.5rem 0.5rem 0 0;
         justify-content: flex-end;
         color: red;
-        font-weight: 500;
         font-size: 1.2rem;
         top: 0;
         bottom: 0;
