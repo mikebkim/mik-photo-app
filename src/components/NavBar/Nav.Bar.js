@@ -5,9 +5,10 @@ export const NavBarWrap = styled.div`
     display: flex;
     justify-content: space-between;
     position: fixed;
-    background-color: white;
+    background-color: rgb(238, 238, 238);
     top: 0;
     width: 100%;
+    z-index: 2;
 
     & > h1 {
       display: flex;
