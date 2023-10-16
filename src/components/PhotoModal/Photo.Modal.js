@@ -27,6 +27,7 @@ export const PhotoModalWrap = styled.div`
         max-height: 30rem;
         min-width: 30rem;
         min-height: 30rem;
+        cursor: pointer;
       }
 
       /* & > .photo-comments {
