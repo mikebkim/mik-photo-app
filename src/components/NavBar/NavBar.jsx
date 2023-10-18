@@ -30,12 +30,12 @@ const NavBar = (props) => {
   const photosSecondaryDropdown = (
     <div className="photos-dropdown-secondary">
       <div className="dropdown-items-secondary">
-        <div
+        <Link
+          to="/photos/losangeles"
           className="dropdown-item-secondary"
-          // onClick={() => handlSecondaryeMouseEnter()}
         >
-          Los Angeles
-        </div>
+          LOS ANGELES
+        </Link>
         <div
           className="dropdown-item-secondary"
           // onClick={() => handlSecondaryeMouseEnter()}

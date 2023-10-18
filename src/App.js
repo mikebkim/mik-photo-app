@@ -8,6 +8,7 @@ import {
 import NavBar from "./components/NavBar/NavBar";
 import HomePage from "./components/HomePage/HomePage";
 import PhotosPage from "./components/PhotosPage/PhotosPage";
+import PhotosSecondaryPage from "./components/PhotosSecondaryPage/PhotosSecondaryPage";
 
 const App = () => {
   function importAll(r) {
@@ -33,6 +34,11 @@ const App = () => {
             exact
             path="/photos"
             element={<PhotosPage allImages={allImages} />}
+          />
+          <Route
+            exact
+            path="/photos/losangeles"
+            element={<PhotosSecondaryPage allImages={allImages} />}
           />
         </Routes>
       </Router>
