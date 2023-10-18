@@ -23,8 +23,13 @@ const NavBar = (props) => {
     setSecondaryDropdownVisible(false);
   };
 
-  const handlSecondaryeMouseEnter = () => {
+  const handlSecondaryEnter = () => {
     setSecondaryDropdownVisible(true);
+  };
+
+  const handlSecondaryeLeave = () => {
+    setDropdownVisible(false);
+    setSecondaryDropdownVisible(false);
   };
 
   const photosSecondaryDropdown = (
@@ -33,15 +38,13 @@ const NavBar = (props) => {
         <Link
           to="/photos/losangeles"
           className="dropdown-item-secondary"
+          onClick={() => handlSecondaryeLeave()}
         >
           LOS ANGELES
         </Link>
-        <div
-          className="dropdown-item-secondary"
-          // onClick={() => handlSecondaryeMouseEnter()}
-        >
-          Iceland
-        </div>
+        <Link to="/photos/losangeles" className="dropdown-item-secondary">
+          ICELAND
+        </Link>
       </div>
     </div>
   );
@@ -49,10 +52,7 @@ const NavBar = (props) => {
   const photosDropdown = (
     <div className="photos-dropdown">
       <div className="dropdown-items">
-        <div
-          className="dropdown-item"
-          onClick={() => handlSecondaryeMouseEnter()}
-        >
+        <div className="dropdown-item" onClick={() => handlSecondaryEnter()}>
           2023
           {secondaryDropdownVisible ? photosSecondaryDropdown : null}
         </div>

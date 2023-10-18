@@ -1,13 +1,13 @@
 import React from "react";
 import { HomePageWrap } from "./Home.Page";
-import placeholder from "./placeholder.jpg";
+import mainice from "./mainice.jpeg";
 
 const HomePage = () => {
   return (
     <HomePageWrap>
       <div className="HomePage">
         <div className="header">
-          <img className="main-image" src={placeholder} alt="placeholder" />
+          <img className="main-image" src={mainice} alt="mainice" />
         </div>
         <div className="home">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
