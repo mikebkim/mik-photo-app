@@ -23,6 +23,18 @@ const App = () => {
     require.context("./images", false, /\.(png|jpe?g|svg)$/)
   );
 
+  function importSecondaryAll(r) {
+    let imagesSecondary = {};
+    r.keys().forEach((item, index) => {
+      imagesSecondary[item.replace("./", "")] = r(item);
+    });
+    return imagesSecondary;
+  }
+
+  const allSecondaryImages = importSecondaryAll(
+    require.context("./imagesSecondary", false, /\.(png|jpe?g|svg)$/)
+  );
+
   return (
     <div className="App">
       <Router>
@@ -38,7 +50,9 @@ const App = () => {
           <Route
             exact
             path="/photos/losangeles"
-            element={<PhotosSecondaryPage allImages={allImages} />}
+            element={
+              <PhotosSecondaryPage allSecondaryImages={allSecondaryImages} />
+            }
           />
         </Routes>
       </Router>
