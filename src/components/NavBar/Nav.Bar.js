@@ -27,6 +27,24 @@ export const NavBarWrap = styled.div`
         margin-right: 1rem;
         color: black;
         letter-spacing: 0.2rem;
+
+        & > .photos-dropdown {
+          position: absolute;
+          width: 10rem;
+          background-color: rgb(200, 200, 200);
+
+          & > .dropdown-items {
+            color: grey;
+            
+            & > .dropdown-item {
+              margin: 0.5rem;
+
+              &:hover {
+                color: black;
+              }
+            }
+          }
+        }
       }
 
       & > .selected {
@@ -34,6 +52,22 @@ export const NavBarWrap = styled.div`
         margin-right: 1rem;
         color: grey;
         letter-spacing: 0.2rem;
+
+        & > .photos-dropdown {
+          position: absolute;
+          width: 10rem;
+          background-color: rgb(200, 200, 200);
+
+          & > .dropdown-items {
+            & > .dropdown-item {
+              margin: 0.5rem;
+
+              &:hover {
+                color: black;
+              }
+            }
+          }
+        }
       }
     }
   }

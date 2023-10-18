@@ -4,12 +4,30 @@ import { NavBarWrap } from "./Nav.Bar";
 
 const NavBar = (props) => {
   const [selectedTab, setSelectedTab] = useState("");
+  const [dropdownVisible, setDropdownVisible] = useState(false);
 
   const location = useLocation();
 
   useEffect(() => {
     setSelectedTab(JSON.stringify(location));
   }, [location]);
+
+  const handleMouseEnter = () => {
+    setDropdownVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdownVisible(false);
+  };
+
+  const photosDropdown = (
+    <div className="photos-dropdown">
+      <div className="dropdown-items">
+        <div className="dropdown-item">2023</div>
+        <div className="dropdown-item">2024</div>
+      </div>
+    </div>
+  );
 
   return (
     <NavBarWrap>
@@ -25,8 +43,11 @@ const NavBar = (props) => {
           <Link
             to="/photos"
             className={selectedTab.includes("photos") ? "selected" : "nav-link"}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             PHOTOS
+            {dropdownVisible && photosDropdown}
           </Link>
           <Link
             to="/contact"
