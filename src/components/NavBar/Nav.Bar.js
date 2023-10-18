@@ -35,7 +35,7 @@ export const NavBarWrap = styled.div`
 
           & > .dropdown-items {
             color: grey;
-            
+
             & > .dropdown-item {
               margin: 0.5rem;
 
@@ -55,7 +55,7 @@ export const NavBarWrap = styled.div`
 
         & > .photos-dropdown {
           position: absolute;
-          width: 10rem;
+          /* width: 10rem; */
           background-color: rgb(200, 200, 200);
 
           & > .dropdown-items {
@@ -64,6 +64,24 @@ export const NavBarWrap = styled.div`
 
               &:hover {
                 color: black;
+              }
+
+              & > .photos-dropdown-secondary {
+                /* position: absolute; */
+                width: 10rem;
+                background-color: rgb(200, 200, 200);
+                /* margin-left: 5rem; */
+
+                & > .dropdown-items-secondary {
+                  & > .dropdown-item-secondary {
+                    margin: 0.5rem;
+                    color: grey;
+
+                    &:hover {
+                      color: black;
+                    }
+                  }
+                }
               }
             }
           }

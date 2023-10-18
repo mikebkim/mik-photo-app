@@ -5,6 +5,8 @@ import { NavBarWrap } from "./Nav.Bar";
 const NavBar = (props) => {
   const [selectedTab, setSelectedTab] = useState("");
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [secondaryDropdownVisible, setSecondaryDropdownVisible] =
+    useState(false);
 
   const location = useLocation();
 
@@ -18,12 +20,42 @@ const NavBar = (props) => {
 
   const handleMouseLeave = () => {
     setDropdownVisible(false);
+    setSecondaryDropdownVisible(false);
   };
+
+  const handlSecondaryeMouseEnter = () => {
+    setSecondaryDropdownVisible(true);
+  };
+
+  const photosSecondaryDropdown = (
+    <div className="photos-dropdown-secondary">
+      <div className="dropdown-items-secondary">
+        <div
+          className="dropdown-item-secondary"
+          // onClick={() => handlSecondaryeMouseEnter()}
+        >
+          Los Angeles
+        </div>
+        <div
+          className="dropdown-item-secondary"
+          // onClick={() => handlSecondaryeMouseEnter()}
+        >
+          Iceland
+        </div>
+      </div>
+    </div>
+  );
 
   const photosDropdown = (
     <div className="photos-dropdown">
       <div className="dropdown-items">
-        <div className="dropdown-item">2023</div>
+        <div
+          className="dropdown-item"
+          onClick={() => handlSecondaryeMouseEnter()}
+        >
+          2023
+          {secondaryDropdownVisible ? photosSecondaryDropdown : null}
+        </div>
         <div className="dropdown-item">2024</div>
       </div>
     </div>
