@@ -42,7 +42,11 @@ const NavBar = (props) => {
         >
           LOS ANGELES
         </Link>
-        <Link to="/photos/losangeles" className="dropdown-item-secondary">
+        <Link
+          to="/photos/losangeles"
+          className="dropdown-item-secondary"
+          onClick={() => handlSecondaryeLeave()}
+        >
           ICELAND
         </Link>
       </div>
@@ -52,11 +56,20 @@ const NavBar = (props) => {
   const photosDropdown = (
     <div className="photos-dropdown">
       <div className="dropdown-items">
-        <div className="dropdown-item" onClick={() => handlSecondaryEnter()}>
+        <div
+          className="dropdown-item"
+          onMouseEnter={handlSecondaryEnter}
+        >
           2023
-          {secondaryDropdownVisible ? photosSecondaryDropdown : null}
+          {secondaryDropdownVisible ? photosSecondaryDropdown : ""}
         </div>
-        <div className="dropdown-item">2024</div>
+        {/* <div
+          className="dropdown-item"
+          onMouseEnter={handlSecondaryEnter}
+        >
+          2024
+          {secondaryDropdownVisible ? photosSecondaryDropdown : ""}
+        </div> */}
       </div>
     </div>
   );
