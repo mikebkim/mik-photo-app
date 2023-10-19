@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { PhotosSecondaryPageWrap } from "./PhotosSecondary.Page.js";
+import { PhotosSecondaryPageWrap } from "./Photos.Secondary.Page";
 import PhotoModal from "../PhotoModal/PhotoModal";
 
 const PhotosSecondaryPage = ({ allSecondaryImages }) => {
   const [openPhotoModal, setOpenPhotoModal] = useState(false);
   const handleOpenPhotoModal = (photoData) => {
-    setOpenPhotoModal(!openPhotoModal);
     setSelectedPhoto(photoData);
+    setOpenPhotoModal(!openPhotoModal);
   };
 
   const allPhotos = Object.entries(allSecondaryImages);

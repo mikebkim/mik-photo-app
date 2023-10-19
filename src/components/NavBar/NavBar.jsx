@@ -42,13 +42,13 @@ const NavBar = (props) => {
         >
           LOS ANGELES
         </Link>
-        <Link
+        {/* <Link
           to="/photos/losangeles"
           className="dropdown-item-secondary"
           onClick={() => handlSecondaryeLeave()}
         >
           ICELAND
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
@@ -56,10 +56,7 @@ const NavBar = (props) => {
   const photosDropdown = (
     <div className="photos-dropdown">
       <div className="dropdown-items">
-        <div
-          className="dropdown-item"
-          onMouseEnter={handlSecondaryEnter}
-        >
+        <div className="dropdown-item" onMouseEnter={handlSecondaryEnter}>
           2023
           {secondaryDropdownVisible ? photosSecondaryDropdown : ""}
         </div>

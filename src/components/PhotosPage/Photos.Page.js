@@ -11,11 +11,12 @@ export const PhotosPageWrap = styled.div`
       width: 100%;
 
       & > .photo {
-        border: 5px solid black;
-        width: 15rem;
-        height: 15rem;
+        /* border: 5px solid black; */
         margin: 1rem;
+        max-width: 20%;
+        object-fit: cover;
         cursor: pointer;
+        height: min-content;
       }
     }
   }
