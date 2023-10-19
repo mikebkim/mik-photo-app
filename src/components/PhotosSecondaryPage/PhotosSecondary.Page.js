@@ -9,12 +9,14 @@ export const PhotosSecondaryPageWrap = styled.div`
       justify-content: space-between;
       flex-wrap: wrap;
       width: 100%;
+      height: auto;
+      overflow: hidden;
 
       & > .photo-secondary {
-        border: 5px solid black;
-        width: 15rem;
-        height: 15rem;
+        /* border: 2px solid black; */
         margin: 1rem;
+        max-width: 20%;
+        object-fit: cover;
         cursor: pointer;
       }
     }

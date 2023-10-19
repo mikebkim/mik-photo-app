@@ -20,13 +20,16 @@ export const PhotoModalWrap = styled.div`
       margin: 0 auto;
 
       & > .photo-pop {
-        border: 5px solid black;
+        /* border: 5px solid black; */
         margin: -6rem 0 2rem 0;
         z-index: 1;
-        max-width: 30rem;
+        /* max-width: 30rem;
         max-height: 30rem;
         min-width: 30rem;
         min-height: 30rem;
+        object-fit: cover; */
+        max-width: 20%;
+        object-fit: cover;
       }
 
       /* & > .photo-comments {
@@ -52,7 +55,6 @@ export const PhotoModalWrap = styled.div`
         bottom: 0;
         left: 0;
         right: 0;
-        z-index: 0;
 
         & > .close-icon {
           cursor: pointer;
