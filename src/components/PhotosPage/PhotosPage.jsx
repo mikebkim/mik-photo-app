@@ -3,10 +3,6 @@ import { PhotosPageWrap } from "./Photos.Page";
 import PhotoModal from "../PhotoModal/PhotoModal";
 
 const PhotosPage = ({ allImages }) => {
-  console.log(
-    "🚀 ~ file: PhotosPage.jsx:6 ~ PhotosPage ~ allImages:",
-    allImages
-  );
   const [openPhotoModal, setOpenPhotoModal] = useState(false);
   const handleOpenPhotoModal = (photoData) => {
     setSelectedPhoto(photoData);

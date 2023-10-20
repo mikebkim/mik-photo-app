@@ -34,8 +34,6 @@ const App = () => {
   const allSecondaryImages = importSecondaryAll(
     require.context("./imagesSecondary", false, /\.(png|jpe?g|svg)$/)
   );
-  console.log("🚀 ~ file: App.js:37 ~ App ~ allSecondaryImages:", allSecondaryImages)
-
   return (
     <div className="App">
       <Router>
