@@ -27,17 +27,17 @@ const PhotosSecondaryPage = ({ allSecondaryImages }) => {
                   alt={photo[0]}
                   onClick={() => handleOpenPhotoModal(photoData)}
                 />
-                {openPhotoModal ? (
-                  <PhotoModal
-                    selectedPhoto={selectedPhoto}
-                    setOpenPhotoModal={setOpenPhotoModal}
-                  />
-                ) : (
-                  ""
-                )}
               </React.Fragment>
             );
           })}
+          {openPhotoModal ? (
+            <PhotoModal
+              selectedPhoto={selectedPhoto}
+              setOpenPhotoModal={setOpenPhotoModal}
+            />
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </PhotosSecondaryPageWrap>

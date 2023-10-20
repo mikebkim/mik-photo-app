@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const PhotoModalWrap = styled.div`
   .PhotoModal {
-    position: absolute;
-    background: rgb(0, 0, 0);
-    opacity: 0.2;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
     height: 100%;
     width: 100%;
     top: 80px;

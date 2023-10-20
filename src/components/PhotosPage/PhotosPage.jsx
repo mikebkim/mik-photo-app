@@ -3,7 +3,10 @@ import { PhotosPageWrap } from "./Photos.Page";
 import PhotoModal from "../PhotoModal/PhotoModal";
 
 const PhotosPage = ({ allImages }) => {
-  console.log("🚀 ~ file: PhotosPage.jsx:6 ~ PhotosPage ~ allImages:", allImages)
+  console.log(
+    "🚀 ~ file: PhotosPage.jsx:6 ~ PhotosPage ~ allImages:",
+    allImages
+  );
   const [openPhotoModal, setOpenPhotoModal] = useState(false);
   const handleOpenPhotoModal = (photoData) => {
     setSelectedPhoto(photoData);
@@ -28,17 +31,17 @@ const PhotosPage = ({ allImages }) => {
                   alt={photo[0]}
                   onClick={() => handleOpenPhotoModal(photoData)}
                 />
-                {openPhotoModal ? (
-                  <PhotoModal
-                    selectedPhoto={selectedPhoto}
-                    setOpenPhotoModal={setOpenPhotoModal}
-                  />
-                ) : (
-                  ""
-                )}
               </React.Fragment>
             );
           })}
+          {openPhotoModal ? (
+            <PhotoModal
+              selectedPhoto={selectedPhoto}
+              setOpenPhotoModal={setOpenPhotoModal}
+            />
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </PhotosPageWrap>
