@@ -6,17 +6,16 @@ export const PhotosSecondaryPageWrap = styled.div`
 
     & > .all-photos-secondary {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       flex-wrap: wrap;
       width: 100%;
 
       & > .photo-secondary {
-        /* border: 2px solid black; */
         margin: 1rem;
         max-width: 20%;
+        height: min-content;
         object-fit: cover;
         cursor: pointer;
-        height: min-content;
       }
     }
   }

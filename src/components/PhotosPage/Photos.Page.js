@@ -11,7 +11,6 @@ export const PhotosPageWrap = styled.div`
       width: 100%;
 
       & > .photo {
-        /* border: 5px solid black; */
         margin: 1rem;
         max-width: 20%;
         object-fit: cover;

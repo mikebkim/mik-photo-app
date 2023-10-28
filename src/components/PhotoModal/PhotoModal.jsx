@@ -23,12 +23,6 @@ const PhotoModal = ({ selectedPhoto, setOpenPhotoModal }) => {
       <div className="PhotoModal">
         <div className="photo-modal">
           <img className="photo-pop" alt={selectedPhoto} src={selectedPhoto} />
-          {/* <textarea
-            className="photo-comments"
-            placeholder="Say something!"
-            type="text"
-            name="comment"
-          ></textarea> */}
           <div className="close-modal">
             <FontAwesomeIcon
               className="close-icon"
