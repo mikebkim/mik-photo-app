@@ -30,37 +30,21 @@ export const NavBarWrap = styled.div`
 
         & > .photos-dropdown {
           position: absolute;
-          width: 12rem;
+          width: 10rem;
           background-color: rgb(200, 200, 200);
 
           & > .dropdown-items {
+            display: flex;
+            flex-direction: column;
+
             & > .dropdown-item {
               margin: 0.5rem;
+              width: 10rem;
               color: grey;
+              text-decoration: none;
 
               &:hover {
                 color: black;
-              }
-
-              & > .photos-dropdown-secondary {
-                width: 10rem;
-                background-color: rgb(200, 200, 200);
-
-                & > .dropdown-items-secondary {
-                  display: flex;
-                  flex-direction: column;
-
-                  & > .dropdown-item-secondary {
-                    margin: 0.5rem;
-                    width: 10rem;
-                    color: grey;
-                    text-decoration: none;
-
-                    &:hover {
-                      color: black;
-                    }
-                  }
-                }
               }
             }
           }
@@ -75,36 +59,21 @@ export const NavBarWrap = styled.div`
 
         & > .photos-dropdown {
           position: absolute;
-          width: 12rem;
+          width: 10rem;
           background-color: rgb(200, 200, 200);
 
           & > .dropdown-items {
+            display: flex;
+            flex-direction: column;
+
             & > .dropdown-item {
               margin: 0.5rem;
+              width: 10rem;
+              color: grey;
+              text-decoration: none;
 
               &:hover {
                 color: black;
-              }
-
-              & > .photos-dropdown-secondary {
-                width: 10rem;
-                background-color: rgb(200, 200, 200);
-
-                & > .dropdown-items-secondary {
-                  display: flex;
-                  flex-direction: column;
-
-                  & > .dropdown-item-secondary {
-                    margin: 0.5rem;
-                    width: 10rem;
-                    color: grey;
-                    text-decoration: none;
-
-                    &:hover {
-                      color: black;
-                    }
-                  }
-                }
               }
             }
           }

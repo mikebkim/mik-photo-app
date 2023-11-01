@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { PhotosSecondaryPageWrap } from "./Photos.Secondary.Page";
 import PhotoModal from "../PhotoModal/PhotoModal";
 
-const PhotosSecondaryPage = ({ allSecondaryImages }) => {
+const PhotosSecondaryPage = ({ allIcelandImages }) => {
   const [openPhotoModal, setOpenPhotoModal] = useState(false);
   const handleOpenPhotoModal = (photoData) => {
     setSelectedPhoto(photoData);
     setOpenPhotoModal(!openPhotoModal);
   };
 
-  const allPhotos = Object.entries(allSecondaryImages);
+  const allPhotos = Object.entries(allIcelandImages);
 
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 

@@ -5,8 +5,6 @@ import { NavBarWrap } from "./Nav.Bar";
 const NavBar = (props) => {
   const [selectedTab, setSelectedTab] = useState("");
   const [dropdownVisible, setDropdownVisible] = useState(false);
-  const [secondaryDropdownVisible, setSecondaryDropdownVisible] =
-    useState(false);
 
   const location = useLocation();
 
@@ -20,53 +18,22 @@ const NavBar = (props) => {
 
   const handleMouseLeave = () => {
     setDropdownVisible(false);
-    setSecondaryDropdownVisible(false);
-  };
-
-  const handlSecondaryEnter = () => {
-    setSecondaryDropdownVisible(true);
   };
 
   const handlSecondaryeLeave = () => {
     setDropdownVisible(false);
-    setSecondaryDropdownVisible(false);
   };
-
-  const photosSecondaryDropdown = (
-    <div className="photos-dropdown-secondary">
-      <div className="dropdown-items-secondary">
-        <Link
-          to="/photos/losangeles"
-          className="dropdown-item-secondary"
-          onClick={() => handlSecondaryeLeave()}
-        >
-          LOS ANGELES
-        </Link>
-        {/* <Link
-          to="/photos/losangeles"
-          className="dropdown-item-secondary"
-          onClick={() => handlSecondaryeLeave()}
-        >
-          ICELAND
-        </Link> */}
-      </div>
-    </div>
-  );
 
   const photosDropdown = (
     <div className="photos-dropdown">
       <div className="dropdown-items">
-        <div className="dropdown-item" onMouseEnter={handlSecondaryEnter}>
-          2023
-          {secondaryDropdownVisible ? photosSecondaryDropdown : ""}
-        </div>
-        {/* <div
+        <Link
+          to="/photos/iceland"
           className="dropdown-item"
-          onMouseEnter={handlSecondaryEnter}
+          onClick={() => handlSecondaryeLeave()}
         >
-          2024
-          {secondaryDropdownVisible ? photosSecondaryDropdown : ""}
-        </div> */}
+          ICELAND
+        </Link>
       </div>
     </div>
   );
