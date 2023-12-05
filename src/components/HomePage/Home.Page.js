@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HomePageWrap = styled.div`
   .HomePage {
-    margin-top: 5rem;
+    margin-top: 4rem;
 
     & > .header {
       & > .main-image {

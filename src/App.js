@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import HomePage from "./components/HomePage/HomePage";
+import ContactPage from "./components/ContactPage/ContactPage";
 import PhotosPage from "./components/PhotosPage/PhotosPage";
 import PhotosSecondaryPage from "./components/PhotosSecondaryPage/PhotosSecondaryPage";
 
@@ -29,7 +30,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Navigate replace to="/home" />} />
           <Route exact path="/home" element={<HomePage />} />
-          <Route exact path="/photos" element={<PhotosPage allIcelandImages={allIcelandImages} />} />
+          <Route
+            exact
+            path="/photos"
+            element={<PhotosPage allIcelandImages={allIcelandImages} />}
+          />
           <Route
             exact
             path="/photos/iceland"
@@ -37,6 +42,7 @@ const App = () => {
               <PhotosSecondaryPage allIcelandImages={allIcelandImages} />
             }
           />
+          <Route exact path="/contact" element={<ContactPage />} />
         </Routes>
       </Router>
     </div>
