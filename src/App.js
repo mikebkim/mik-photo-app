@@ -29,7 +29,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Navigate replace to="/home" />} />
           <Route exact path="/home" element={<HomePage />} />
-          <Route exact path="/photos" element={<PhotosPage allImages={[]} />} />
+          <Route exact path="/photos" element={<PhotosPage allIcelandImages={allIcelandImages} />} />
           <Route
             exact
             path="/photos/iceland"

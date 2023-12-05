@@ -5,7 +5,7 @@ export const NavBarWrap = styled.div`
     display: flex;
     justify-content: space-between;
     position: fixed;
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(222, 222, 222);
     top: 0;
     width: 100%;
     z-index: 2;
@@ -13,7 +13,7 @@ export const NavBarWrap = styled.div`
     & > h1 {
       display: flex;
       align-items: center;
-      margin-left: 1rem;
+      margin: 1rem;
       letter-spacing: 0.2rem;
     }
 

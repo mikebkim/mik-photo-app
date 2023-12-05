@@ -6,16 +6,40 @@ export const PhotosPageWrap = styled.div`
 
     & > .all-photos {
       display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      width: 100%;
+      justify-content: space-evenly;
+      margin: 6rem 0;
 
-      & > .photo {
-        margin: 1rem;
-        max-width: 20%;
-        object-fit: cover;
-        cursor: pointer;
-        height: min-content;
+      & > .photos-column {
+        min-width: 20%;
+        margin: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        overflow: auto;
+        background-color: white;
+
+        & > .location-link {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: black;
+          width: 100%;
+          background-color: rgb(222, 222, 222);
+          text-decoration: none;
+          cursor: pointer;
+
+          & > .photo {
+            width: 20rem;
+            height: 20rem;
+            cursor: pointer;
+          }
+
+          &:hover {
+            color: grey;
+            transition: 200ms ease-in-out;
+          }
+        }
       }
     }
   }

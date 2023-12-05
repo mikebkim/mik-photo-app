@@ -9,7 +9,7 @@ const PhotosSecondaryPage = ({ allIcelandImages }) => {
     setOpenPhotoModal(!openPhotoModal);
   };
 
-  const allPhotos = Object.entries(allIcelandImages);
+  const allIcelandPhotos = Object.entries(allIcelandImages);
 
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
@@ -17,7 +17,7 @@ const PhotosSecondaryPage = ({ allIcelandImages }) => {
     <PhotosSecondaryPageWrap>
       <div className="PhotosSecondaryPage">
         <div className="all-photos-secondary">
-          {allPhotos.map((photo) => {
+          {allIcelandPhotos.map((photo) => {
             const photoData = photo[1];
             return (
               <React.Fragment>
