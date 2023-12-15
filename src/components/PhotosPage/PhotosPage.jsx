@@ -21,7 +21,6 @@ const PhotosPage = ({ allIcelandImages }) => {
           <div className="iceland-photos photos-column">
             <Link to="/photos/iceland" className="location-link">
               <h2>ICELAND</h2>
-
               <img className="photo" src={allIcelandPhotos[0][1]} alt={""} />
               {/* {allIcelandPhotos.map((photo) => {
               const photoData = photo[1];
