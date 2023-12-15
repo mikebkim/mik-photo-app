@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PhotosPageWrap = styled.div`
   .PhotosPage {
-    margin-top: 5rem;
+    margin-top: 4rem;
 
     & > .all-photos {
       display: flex;
@@ -28,6 +28,13 @@ export const PhotosPageWrap = styled.div`
           background-color: rgb(222, 222, 222);
           text-decoration: none;
           cursor: pointer;
+
+          & > h2 {
+            position: absolute;
+            color: black;
+            text-shadow: -1.2px 1.2px 0 white, 1.2px 1.2px 0 white,
+              1.2px -1.2px 0 white, -1.2px -1.2px 0 white;
+          }
 
           & > .photo {
             width: 20rem;

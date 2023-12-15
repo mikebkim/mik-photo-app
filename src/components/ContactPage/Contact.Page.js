@@ -6,6 +6,13 @@ export const ContactPageWrap = styled.div`
 
     & > .header {
     }
+
+    & > .contact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem;
+    }
   }
 `;
 
