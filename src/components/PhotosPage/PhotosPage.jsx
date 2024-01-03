@@ -1,33 +1,21 @@
 import React from "react";
 import { PhotosPageWrap } from "./Photos.Page";
-// import PhotoModal from "../PhotoModal/PhotoModal";
 import { Link } from "react-router-dom";
 
 const PhotosPage = ({ allPhotos }) => {
-  // const [openPhotoModal, setOpenPhotoModal] = useState(false);
-  // const handleOpenPhotoModal = (photoData) => {
-  //   setSelectedPhoto(photoData);
-  //   setOpenPhotoModal(!openPhotoModal);
-  // };
-
   const photos = Object.entries(allPhotos);
-  const photosIceland = Object.entries(allPhotos);
-  const photosGreenland = Object.entries(allPhotos);
-  const photosPatagonia = Object.entries(allPhotos);
 
-  const filteredIcelandPhotos = photosIceland.filter((photo) =>
+  const filteredIcelandPhotos = photos.filter((photo) =>
     photo[0].toLocaleLowerCase().includes("iceland")
   );
 
-  const filteredGreenlandPhotos = photosGreenland.filter((photo) =>
+  const filteredGreenlandPhotos = photos.filter((photo) =>
     photo[0].toLocaleLowerCase().includes("greenland")
   );
 
-  const filteredPatagoniaPhotos = photosPatagonia.filter((photo) =>
+  const filteredPatagoniaPhotos = photos.filter((photo) =>
     photo[0].toLocaleLowerCase().includes("patagonia")
   );
-
-  // const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   return (
     <PhotosPageWrap>
@@ -41,19 +29,6 @@ const PhotosPage = ({ allPhotos }) => {
                 src={filteredIcelandPhotos[0][1]}
                 alt={""}
               />
-              {/* {allIcelandPhotos.map((photo) => {
-              const photoData = photo[1];
-              return (
-                <React.Fragment>
-                  <img
-                    className="photo"
-                    src={photoData}
-                    alt={photo[0]}
-                    onClick={() => handleOpenPhotoModal(photoData)}
-                  />
-                </React.Fragment>
-              );
-            })} */}
             </Link>
           </div>
           <div className="greenland-photos photos-column">
@@ -64,19 +39,6 @@ const PhotosPage = ({ allPhotos }) => {
                 src={filteredGreenlandPhotos[0][1]}
                 alt={""}
               />
-              {/* {allIcelandPhotos.map((photo) => {
-              const photoData = photo[1];
-              return (
-                <React.Fragment>
-                  <img
-                    className="photo"
-                    src={photoData}
-                    alt={photo[0]}
-                    onClick={() => handleOpenPhotoModal(photoData)}
-                  />
-                </React.Fragment>
-              );
-            })} */}
             </Link>
           </div>
           <div className="losangeles-photos photos-column">
@@ -87,30 +49,8 @@ const PhotosPage = ({ allPhotos }) => {
                 src={filteredPatagoniaPhotos[0][1]}
                 alt={""}
               />
-              {/* {allIcelandPhotos.map((photo) => {
-              const photoData = photo[1];
-              return (
-                <React.Fragment>
-                  <img
-                    className="photo"
-                    src={photoData}
-                    alt={photo[0]}
-                    onClick={() => handleOpenPhotoModal(photoData)}
-                  />
-                </React.Fragment>
-              );
-            })} */}
             </Link>
           </div>
-
-          {/* {openPhotoModal ? (
-            <PhotoModal
-              selectedPhoto={selectedPhoto}
-              setOpenPhotoModal={setOpenPhotoModal}
-            />
-          ) : (
-            ""
-          )} */}
         </div>
       </div>
     </PhotosPageWrap>
