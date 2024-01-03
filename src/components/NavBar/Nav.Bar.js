@@ -8,7 +8,7 @@ export const NavBarWrap = styled.div`
     background-color: rgb(222, 222, 222);
     top: 0;
     width: 100%;
-    z-index: 1030;
+    height: 5rem;
 
     & > h1 {
       display: flex;

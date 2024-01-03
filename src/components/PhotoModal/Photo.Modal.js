@@ -3,12 +3,13 @@ import styled from "styled-components";
 export const PhotoModalWrap = styled.div`
   .PhotoModal {
     position: fixed;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.85);
     height: 100%;
     width: 100%;
-    top: 80px;
+    top: 0;
     bottom: 0;
     left: 0;
+    z-index: 1;
 
     & > .photo-modal {
       display: flex;
@@ -20,9 +21,9 @@ export const PhotoModalWrap = styled.div`
       margin: 0 auto;
 
       & > .photo-pop {
-        margin: -6rem 0 2rem 0;
+        margin: 5rem 0 5rem 0;
         z-index: 1;
-        max-width: 20%;
+        max-width: 30%;
         object-fit: cover;
       }
 
