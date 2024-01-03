@@ -1,13 +1,39 @@
 import styled from "styled-components";
 
 export const PhotosPageWrap = styled.div`
-  @keyframes slidein {
+  @keyframes openphoto {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 1;
+    }
     from {
       width: 0;
     }
-
     to {
       width: 20rem;
+    }
+  }
+
+  @keyframes opentitle {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 1;
     }
   }
 
@@ -36,13 +62,15 @@ export const PhotosPageWrap = styled.div`
             color: black;
             text-shadow: -1.2px 1.2px 0 white, 1.2px 1.2px 0 white,
               1.2px -1.2px 0 white, -1.2px -1.2px 0 white;
+            animation: 2s opentitle;
+            z-index: 1;
           }
 
           & > .photo {
             width: 20rem;
             height: 20rem;
             cursor: pointer;
-            animation: 2s slidein;
+            animation: 2s openphoto;
           }
         }
       }

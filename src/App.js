@@ -12,17 +12,18 @@ import PhotosPage from "./components/PhotosPage/PhotosPage";
 import PhotosSecondaryPage from "./components/PhotosSecondaryPage/PhotosSecondaryPage";
 
 const App = () => {
-  function importIcelandyAll(r) {
-    let imagesIceland = {};
+  function importAllImages(r) {
+    let allImages = {};
     r.keys().forEach((item, index) => {
-      imagesIceland[item.replace("./", "")] = r(item);
+      allImages[item.replace("./", "")] = r(item);
     });
-    return imagesIceland;
+    return allImages;
   }
 
-  const allIcelandImages = importIcelandyAll(
-    require.context("./imagesIceland", false, /\.(png|jpe?g|svg)$/)
+  const allPhotos = importAllImages(
+    require.context("./images", false, /\.(png|jpe?g|svg|jpg)$/)
   );
+
   return (
     <div className="App">
       <Router>
@@ -33,14 +34,22 @@ const App = () => {
           <Route
             exact
             path="/photos"
-            element={<PhotosPage allIcelandImages={allIcelandImages} />}
+            element={<PhotosPage allPhotos={allPhotos} />}
           />
           <Route
             exact
             path="/photos/iceland"
-            element={
-              <PhotosSecondaryPage allIcelandImages={allIcelandImages} />
-            }
+            element={<PhotosSecondaryPage allPhotos={allPhotos} />}
+          />
+          <Route
+            exact
+            path="/photos/greenland"
+            element={<PhotosSecondaryPage allPhotos={allPhotos} />}
+          />
+          <Route
+            exact
+            path="/photos/patagonia"
+            element={<PhotosSecondaryPage allPhotos={allPhotos} />}
           />
           <Route exact path="/contact" element={<ContactPage />} />
         </Routes>

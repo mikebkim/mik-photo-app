@@ -35,18 +35,18 @@ const NavBar = (props) => {
           ICELAND
         </Link>
         <Link
-          to="/photos/iceland"
+          to="/photos/greenland"
           className="dropdown-item"
           onClick={() => handlSecondaryeLeave()}
         >
-          JAPAN
+          GREENLAND
         </Link>
         <Link
-          to="/photos/iceland"
+          to="/photos/patagonia"
           className="dropdown-item"
           onClick={() => handlSecondaryeLeave()}
         >
-          LOS ANGELES
+          PATAGONIA
         </Link>
       </div>
     </div>

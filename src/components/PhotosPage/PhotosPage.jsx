@@ -3,14 +3,14 @@ import { PhotosPageWrap } from "./Photos.Page";
 // import PhotoModal from "../PhotoModal/PhotoModal";
 import { Link } from "react-router-dom";
 
-const PhotosPage = ({ allIcelandImages }) => {
+const PhotosPage = ({ allPhotos }) => {
   // const [openPhotoModal, setOpenPhotoModal] = useState(false);
   // const handleOpenPhotoModal = (photoData) => {
   //   setSelectedPhoto(photoData);
   //   setOpenPhotoModal(!openPhotoModal);
   // };
 
-  const allIcelandPhotos = Object.entries(allIcelandImages);
+  const photos = Object.entries(allPhotos);
 
   // const [selectedPhoto, setSelectedPhoto] = useState(null);
 
@@ -21,7 +21,7 @@ const PhotosPage = ({ allIcelandImages }) => {
           <div className="iceland-photos photos-column">
             <Link to="/photos/iceland" className="location-link">
               <h2>ICELAND</h2>
-              <img className="photo" src={allIcelandPhotos[0][1]} alt={""} />
+              <img className="photo" src={photos[0][1]} alt={""} />
               {/* {allIcelandPhotos.map((photo) => {
               const photoData = photo[1];
               return (
@@ -37,10 +37,10 @@ const PhotosPage = ({ allIcelandImages }) => {
             })} */}
             </Link>
           </div>
-          <div className="japan-photos photos-column">
-            <Link to="/photos/iceland" className="location-link">
-              <h2>JAPAN</h2>
-              <img className="photo" src={allIcelandPhotos[6][1]} alt={""} />
+          <div className="greenland-photos photos-column">
+            <Link to="/photos/greenland" className="location-link">
+              <h2>GREENLAND</h2>
+              <img className="photo" src={photos[0][1]} alt={""} />
               {/* {allIcelandPhotos.map((photo) => {
               const photoData = photo[1];
               return (
@@ -57,9 +57,9 @@ const PhotosPage = ({ allIcelandImages }) => {
             </Link>
           </div>
           <div className="losangeles-photos photos-column">
-            <Link to="/photos/iceland" className="location-link">
-              <h2>LOS ANGELES</h2>
-              <img className="photo" src={allIcelandPhotos[1][1]} alt={""} />
+            <Link to="/photos/patagonia" className="location-link">
+              <h2>PATAGONIA</h2>
+              <img className="photo" src={photos[0][1]} alt={""} />
               {/* {allIcelandPhotos.map((photo) => {
               const photoData = photo[1];
               return (
