@@ -11,6 +11,21 @@ const PhotosPage = ({ allPhotos }) => {
   // };
 
   const photos = Object.entries(allPhotos);
+  const photosIceland = Object.entries(allPhotos);
+  const photosGreenland = Object.entries(allPhotos);
+  const photosPatagonia = Object.entries(allPhotos);
+
+  const filteredIcelandPhotos = photosIceland.filter((photo) =>
+    photo[0].toLocaleLowerCase().includes("iceland")
+  );
+
+  const filteredGreenlandPhotos = photosGreenland.filter((photo) =>
+    photo[0].toLocaleLowerCase().includes("greenland")
+  );
+
+  const filteredPatagoniaPhotos = photosPatagonia.filter((photo) =>
+    photo[0].toLocaleLowerCase().includes("patagonia")
+  );
 
   // const [selectedPhoto, setSelectedPhoto] = useState(null);
 
@@ -21,7 +36,11 @@ const PhotosPage = ({ allPhotos }) => {
           <div className="iceland-photos photos-column">
             <Link to="/photos/iceland" className="location-link">
               <h2>ICELAND</h2>
-              <img className="photo" src={photos[0][1]} alt={""} />
+              <img
+                className="photo"
+                src={filteredIcelandPhotos[0][1]}
+                alt={""}
+              />
               {/* {allIcelandPhotos.map((photo) => {
               const photoData = photo[1];
               return (
@@ -40,7 +59,11 @@ const PhotosPage = ({ allPhotos }) => {
           <div className="greenland-photos photos-column">
             <Link to="/photos/greenland" className="location-link">
               <h2>GREENLAND</h2>
-              <img className="photo" src={photos[0][1]} alt={""} />
+              <img
+                className="photo"
+                src={filteredGreenlandPhotos[0][1]}
+                alt={""}
+              />
               {/* {allIcelandPhotos.map((photo) => {
               const photoData = photo[1];
               return (
@@ -59,7 +82,11 @@ const PhotosPage = ({ allPhotos }) => {
           <div className="losangeles-photos photos-column">
             <Link to="/photos/patagonia" className="location-link">
               <h2>PATAGONIA</h2>
-              <img className="photo" src={photos[0][1]} alt={""} />
+              <img
+                className="photo"
+                src={filteredPatagoniaPhotos[0][1]}
+                alt={""}
+              />
               {/* {allIcelandPhotos.map((photo) => {
               const photoData = photo[1];
               return (
