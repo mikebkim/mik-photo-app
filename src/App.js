@@ -51,6 +51,16 @@ const App = () => {
             path="/photos/patagonia"
             element={<PhotosSecondaryPage allPhotos={allPhotos} />}
           />
+          <Route
+            exact
+            path="/photos/lofoten"
+            element={<PhotosSecondaryPage allPhotos={allPhotos} />}
+          />
+          <Route
+            exact
+            path="/photos/seoul"
+            element={<PhotosSecondaryPage allPhotos={allPhotos} />}
+          />
           <Route exact path="/contact" element={<ContactPage />} />
         </Routes>
       </Router>

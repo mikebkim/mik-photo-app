@@ -17,6 +17,14 @@ const PhotosPage = ({ allPhotos }) => {
     photo[0].toLocaleLowerCase().includes("patagonia")
   );
 
+  const filteredLofotenPhotos = photos.filter((photo) =>
+    photo[0].toLocaleLowerCase().includes("lofoten")
+  );
+
+  const filteredSeoulPhotos = photos.filter((photo) =>
+    photo[0].toLocaleLowerCase().includes("seoul")
+  );
+
   return (
     <PhotosPageWrap>
       <div className="PhotosPage">
@@ -41,12 +49,32 @@ const PhotosPage = ({ allPhotos }) => {
               />
             </Link>
           </div>
-          <div className="losangeles-photos photos-column">
+          <div className="patagonia-photos photos-column">
             <Link to="/photos/patagonia" className="location-link">
               <h2>PATAGONIA</h2>
               <img
                 className="photo"
                 src={filteredPatagoniaPhotos[0][1]}
+                alt={""}
+              />
+            </Link>
+          </div>
+          <div className="lofoten-photos photos-column">
+            <Link to="/photos/lofoten" className="location-link">
+              <h2>LOFOTEN</h2>
+              <img
+                className="photo"
+                src={filteredLofotenPhotos[0][1]}
+                alt={""}
+              />
+            </Link>
+          </div>
+          <div className="seoul-photos photos-column">
+            <Link to="/photos/seoul" className="location-link">
+              <h2>SEOUL</h2>
+              <img
+                className="photo"
+                src={filteredSeoulPhotos[0][1]}
                 alt={""}
               />
             </Link>

@@ -44,6 +44,7 @@ export const PhotosPageWrap = styled.div`
       display: flex;
       justify-content: space-evenly;
       margin: 6rem 0;
+      flex-wrap: wrap;
 
       & > .photos-column {
         margin: 0 2rem;
@@ -55,6 +56,7 @@ export const PhotosPageWrap = styled.div`
           display: flex;
           justify-content: center;
           align-items: center;
+          margin: 1rem;
           cursor: pointer;
 
           & > h2 {

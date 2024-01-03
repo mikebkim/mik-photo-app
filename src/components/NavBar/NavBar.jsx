@@ -48,6 +48,20 @@ const NavBar = (props) => {
         >
           PATAGONIA
         </Link>
+        <Link
+          to="/photos/lofoten"
+          className="dropdown-item"
+          onClick={() => handlSecondaryeLeave()}
+        >
+          LOFOTEN
+        </Link>
+        <Link
+          to="/photos/seoul"
+          className="dropdown-item"
+          onClick={() => handlSecondaryeLeave()}
+        >
+          SEOUL
+        </Link>
       </div>
     </div>
   );
