@@ -9,7 +9,7 @@ export const NavBarWrap = styled.div`
     top: 0;
     width: 100%;
     height: 5rem;
-    z-index: 2;
+    z-index: 0;
 
     & > h1 {
       display: flex;
@@ -23,33 +23,41 @@ export const NavBarWrap = styled.div`
       align-items: center;
       margin-right: 1rem;
 
+      & > .dropdown-arrow {
+        margin-right: 1rem;
+        margin-left: -1rem;
+      }
+
+      & > .photos-dropdown {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        width: 10rem;
+        background-color: rgb(200, 200, 200);
+        z-index: 2;
+
+        & > .dropdown-items {
+          display: flex;
+          flex-direction: column;
+
+          & > .dropdown-item {
+            margin: 0.5rem;
+            width: 10rem;
+            color: grey;
+            text-decoration: none;
+
+            &:hover {
+              color: black;
+            }
+          }
+        }
+      }
+
       & > .nav-link {
         text-decoration: none;
         margin-right: 1rem;
         color: black;
         letter-spacing: 0.2rem;
-
-        & > .photos-dropdown {
-          position: absolute;
-          width: 10rem;
-          background-color: rgb(200, 200, 200);
-
-          & > .dropdown-items {
-            display: flex;
-            flex-direction: column;
-
-            & > .dropdown-item {
-              margin: 0.5rem;
-              width: 10rem;
-              color: grey;
-              text-decoration: none;
-
-              &:hover {
-                color: black;
-              }
-            }
-          }
-        }
       }
 
       & > .selected {
@@ -58,26 +66,9 @@ export const NavBarWrap = styled.div`
         color: grey;
         letter-spacing: 0.2rem;
 
-        & > .photos-dropdown {
-          position: absolute;
-          width: 10rem;
-          background-color: rgb(200, 200, 200);
-
-          & > .dropdown-items {
-            display: flex;
-            flex-direction: column;
-
-            & > .dropdown-item {
-              margin: 0.5rem;
-              width: 10rem;
-              color: grey;
-              text-decoration: none;
-
-              &:hover {
-                color: black;
-              }
-            }
-          }
+        & > .dropdown-arrow {
+          margin-right: 1rem;
+          margin-left: -1rem;
         }
       }
     }

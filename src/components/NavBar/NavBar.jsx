@@ -80,12 +80,18 @@ const NavBar = (props) => {
           <Link
             to="/photos"
             className={selectedTab.includes("photos") ? "selected" : "nav-link"}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            // onMouseEnter={handleMouseEnter}
+            // onMouseLeave={handleMouseLeave}
           >
             PHOTOS
-            {dropdownVisible && photosDropdown}
           </Link>
+          <div
+            className="dropdown-arrow"
+            onClick={() => setDropdownVisible(!dropdownVisible)}
+          >
+            {`${">"}`}
+          </div>
+          {dropdownVisible && photosDropdown}
           <Link
             to="/contact"
             className={
