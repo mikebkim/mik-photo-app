@@ -28,13 +28,6 @@ const NavBar = (props) => {
     <div className="photos-dropdown">
       <div className="dropdown-items">
         <Link
-          to="/photos/iceland"
-          className="dropdown-item"
-          onClick={() => handlSecondaryeLeave()}
-        >
-          ICELAND
-        </Link>
-        <Link
           to="/photos/greenland"
           className="dropdown-item"
           onClick={() => handlSecondaryeLeave()}
@@ -42,11 +35,11 @@ const NavBar = (props) => {
           GREENLAND
         </Link>
         <Link
-          to="/photos/patagonia"
+          to="/photos/iceland"
           className="dropdown-item"
           onClick={() => handlSecondaryeLeave()}
         >
-          PATAGONIA
+          ICELAND
         </Link>
         <Link
           to="/photos/lofoten"
@@ -54,6 +47,13 @@ const NavBar = (props) => {
           onClick={() => handlSecondaryeLeave()}
         >
           LOFOTEN
+        </Link>
+        <Link
+          to="/photos/patagonia"
+          className="dropdown-item"
+          onClick={() => handlSecondaryeLeave()}
+        >
+          PATAGONIA
         </Link>
         <Link
           to="/photos/seoul"
@@ -72,12 +72,14 @@ const NavBar = (props) => {
         <h1>SEANNA KIM</h1>
         <div className="nav-links">
           <Link
+            as={Link}
             to="/home"
             className={selectedTab.includes("home") ? "selected" : "nav-link"}
           >
             HOME
           </Link>
           <Link
+            as={Link}
             to="/photos"
             className={selectedTab.includes("photos") ? "selected" : "nav-link"}
             onMouseEnter={handleMouseEnter}
@@ -87,6 +89,7 @@ const NavBar = (props) => {
             {dropdownVisible && photosDropdown}
           </Link>
           <Link
+            as={Link}
             to="/contact"
             className={
               selectedTab.includes("contact") ? "selected" : "nav-link"

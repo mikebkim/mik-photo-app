@@ -30,14 +30,13 @@ const PhotosSecondaryPage = ({ allPhotos, selectedLocation }) => {
           {filteredPhotos.map((photo) => {
             const photoData = photo[1];
             return (
-              <React.Fragment>
-                <img
-                  className="photo-secondary"
-                  src={photoData}
-                  alt={photo[0]}
-                  onClick={() => handleOpenPhotoModal(photoData)}
-                />
-              </React.Fragment>
+              <img
+                key={photoData}
+                className="photo-secondary"
+                src={photoData}
+                alt={photo[0]}
+                onClick={() => handleOpenPhotoModal(photoData)}
+              />
             );
           })}
           {openPhotoModal ? (

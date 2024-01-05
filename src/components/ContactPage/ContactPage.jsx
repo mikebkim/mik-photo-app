@@ -7,16 +7,11 @@ const ContactPage = () => {
   return (
     <ContactPageWrap>
       <div className="ContactPage">
-        <div className="header">CONTACT</div>
+        <div className="header"></div>
         <div className="contact">
           <form>
             <div className="name-input">
-              <input
-                className="name"
-                placeholder="Name"
-                type="text"
-                name="name"
-              />
+              Coming soon...
             </div>
           </form>
         </div>
