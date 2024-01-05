@@ -1,24 +1,37 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { NavBarWrap } from "./Nav.Bar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretRight, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
-const NavBar = (props) => {
+const NavBar = () => {
   const [selectedTab, setSelectedTab] = useState("");
   const [dropdownVisible, setDropdownVisible] = useState(false);
-
   const location = useLocation();
+
+  function useOutsideAlerter(ref) {
+    useEffect(() => {
+      //  Alert if clicked on outside of element
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setDropdownVisible(false);
+        }
+      }
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [ref]);
+  }
+
+  const wrapperRef = useRef(null);
+  useOutsideAlerter(wrapperRef);
 
   useEffect(() => {
     setSelectedTab(JSON.stringify(location));
   }, [location]);
-
-  const handleMouseEnter = () => {
-    setDropdownVisible(true);
-  };
-
-  const handleMouseLeave = () => {
-    setDropdownVisible(false);
-  };
 
   const handlSecondaryeLeave = () => {
     setDropdownVisible(false);
@@ -68,7 +81,7 @@ const NavBar = (props) => {
 
   return (
     <NavBarWrap>
-      <div className="NavBar">
+      <div className="NavBar" ref={wrapperRef}>
         <h1>SEANNA KIM</h1>
         <div className="nav-links">
           <Link
@@ -80,17 +93,22 @@ const NavBar = (props) => {
           <Link
             to="/photos"
             className={selectedTab.includes("photos") ? "selected" : "nav-link"}
-            // onMouseEnter={handleMouseEnter}
-            // onMouseLeave={handleMouseLeave}
           >
             PHOTOS
           </Link>
-          <div
-            className="dropdown-arrow"
-            onClick={() => setDropdownVisible(!dropdownVisible)}
-          >
-            {`${">"}`}
-          </div>
+          {dropdownVisible ? (
+            <FontAwesomeIcon
+              className="dropdown-arrow-down"
+              icon={faCaretDown}
+              onClick={() => setDropdownVisible(!dropdownVisible)}
+            />
+          ) : (
+            <FontAwesomeIcon
+              className="dropdown-arrow-right"
+              icon={faCaretRight}
+              onClick={() => setDropdownVisible(!dropdownVisible)}
+            />
+          )}
           {dropdownVisible && photosDropdown}
           <Link
             to="/contact"

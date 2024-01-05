@@ -29,16 +29,6 @@ const PhotosPage = ({ allPhotos }) => {
     <PhotosPageWrap>
       <div className="PhotosPage">
         <div className="all-photos">
-          <div className="iceland-photos photos-column">
-            <Link to="/photos/iceland" className="location-link">
-              <h2>ICELAND</h2>
-              <img
-                className="photo"
-                src={filteredIcelandPhotos[0][1]}
-                alt={""}
-              />
-            </Link>
-          </div>
           <div className="greenland-photos photos-column">
             <Link to="/photos/greenland" className="location-link">
               <h2>GREENLAND</h2>
@@ -49,12 +39,12 @@ const PhotosPage = ({ allPhotos }) => {
               />
             </Link>
           </div>
-          <div className="patagonia-photos photos-column">
-            <Link to="/photos/patagonia" className="location-link">
-              <h2>PATAGONIA</h2>
+          <div className="iceland-photos photos-column">
+            <Link to="/photos/iceland" className="location-link">
+              <h2>ICELAND</h2>
               <img
                 className="photo"
-                src={filteredPatagoniaPhotos[0][1]}
+                src={filteredIcelandPhotos[0][1]}
                 alt={""}
               />
             </Link>
@@ -69,14 +59,20 @@ const PhotosPage = ({ allPhotos }) => {
               />
             </Link>
           </div>
+          <div className="patagonia-photos photos-column">
+            <Link to="/photos/patagonia" className="location-link">
+              <h2>PATAGONIA</h2>
+              <img
+                className="photo"
+                src={filteredPatagoniaPhotos[0][1]}
+                alt={""}
+              />
+            </Link>
+          </div>
           <div className="seoul-photos photos-column">
             <Link to="/photos/seoul" className="location-link">
               <h2>SEOUL</h2>
-              <img
-                className="photo"
-                src={filteredSeoulPhotos[0][1]}
-                alt={""}
-              />
+              <img className="photo" src={filteredSeoulPhotos[0][1]} alt={""} />
             </Link>
           </div>
         </div>

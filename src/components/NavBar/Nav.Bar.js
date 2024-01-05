@@ -23,15 +23,23 @@ export const NavBarWrap = styled.div`
       align-items: center;
       margin-right: 1rem;
 
-      & > .dropdown-arrow {
+      & > .dropdown-arrow-right {
         margin-right: 1rem;
         margin-left: -1rem;
+        cursor: pointer;
+      }
+
+      & > .dropdown-arrow-down {
+        margin-right: 1rem;
+        margin-left: -1rem;
+        width: 8px;
+        cursor: pointer;
       }
 
       & > .photos-dropdown {
         position: absolute;
         top: 50px;
-        right: 50px;
+        right: 80px;
         width: 10rem;
         background-color: rgb(200, 200, 200);
         z-index: 2;
@@ -66,9 +74,17 @@ export const NavBarWrap = styled.div`
         color: grey;
         letter-spacing: 0.2rem;
 
-        & > .dropdown-arrow {
+        & > .dropdown-arrow-right {
           margin-right: 1rem;
           margin-left: -1rem;
+          cursor: pointer;
+        }
+
+        & > .dropdown-arrow-down {
+          margin-right: 1rem;
+          margin-left: -1rem;
+          width: 8px;
+          cursor: pointer;
         }
       }
     }
