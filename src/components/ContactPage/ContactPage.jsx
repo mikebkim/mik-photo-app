@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+// import React, { useState } from "react";
 import { ContactPageWrap } from "./Contact.Page";
 
 const ContactPage = () => {
-  const [nameInput, setNameInput] = useState("");
+  // const [nameInput, setNameInput] = useState("");
 
   return (
     <ContactPageWrap>
@@ -10,9 +11,7 @@ const ContactPage = () => {
         <div className="header"></div>
         <div className="contact">
           <form>
-            <div className="name-input">
-              Coming soon...
-            </div>
+            <div className="name-input">Coming soon...</div>
           </form>
         </div>
       </div>
