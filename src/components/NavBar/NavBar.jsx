@@ -98,13 +98,21 @@ const NavBar = () => {
           </Link>
           {dropdownVisible ? (
             <FontAwesomeIcon
-              className="dropdown-arrow-down"
+              className={
+                selectedTab.includes("photos")
+                  ? "selected dropdown-arrow-down"
+                  : "nav-link dropdown-arrow-down"
+              }
               icon={faCaretDown}
               onClick={() => setDropdownVisible(!dropdownVisible)}
             />
           ) : (
             <FontAwesomeIcon
-              className="dropdown-arrow-right"
+              className={
+                selectedTab.includes("photos")
+                  ? "selected dropdown-arrow-right"
+                  : "nav-link dropdown-arrow-right"
+              }
               icon={faCaretRight}
               onClick={() => setDropdownVisible(!dropdownVisible)}
             />

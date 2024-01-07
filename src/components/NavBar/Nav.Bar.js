@@ -9,7 +9,7 @@ export const NavBarWrap = styled.div`
     top: 0;
     width: 100%;
     height: 5rem;
-    z-index: 0;
+    z-index: 1;
 
     & > h1 {
       display: flex;
