@@ -1,6 +1,33 @@
 import styled from "styled-components";
 
 export const NavBarWrap = styled.div`
+  @keyframes slidemenu {
+    from {
+      height: 0;
+    }
+    to {
+      height: 11.5rem;
+    }
+  }
+
+  @keyframes slideitems {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   .NavBar {
     display: flex;
     justify-content: space-between;
@@ -21,17 +48,17 @@ export const NavBarWrap = styled.div`
     & > .nav-links {
       display: flex;
       align-items: center;
-      margin-right: 1rem;
+      margin-right: 1.5rem;
 
       & > .dropdown-arrow-right {
-        margin-right: 1rem;
-        margin-left: -1rem;
+        margin-right: 1.5rem;
+        margin-left: -1.5rem;
         cursor: pointer;
       }
 
       & > .dropdown-arrow-down {
-        margin-right: 1rem;
-        margin-left: -1rem;
+        margin-right: 1.5rem;
+        margin-left: -1.5rem;
         width: 8px;
         cursor: pointer;
       }
@@ -39,23 +66,24 @@ export const NavBarWrap = styled.div`
       & > .photos-dropdown {
         position: absolute;
         top: 50px;
-        right: 80px;
-        width: 10rem;
+        right: 150px;
         background-color: rgb(200, 200, 200);
         z-index: 2;
+        animation: 0.5s slidemenu;
 
         & > .dropdown-items {
           display: flex;
           flex-direction: column;
+          animation: 1s slideitems;
 
           & > .dropdown-item {
-            margin: 0.5rem;
-            width: 10rem;
+            padding: 0.5rem;
             color: grey;
             text-decoration: none;
 
             &:hover {
               color: black;
+              background-color: rgba(0, 0, 0, 0.5);
             }
           }
         }
@@ -63,26 +91,26 @@ export const NavBarWrap = styled.div`
 
       & > .nav-link {
         text-decoration: none;
-        margin-right: 1rem;
+        margin-right: 1.5rem;
         color: black;
         letter-spacing: 0.2rem;
       }
 
       & > .selected {
         text-decoration: none;
-        margin-right: 1rem;
+        margin-right: 1.5rem;
         color: grey;
         letter-spacing: 0.2rem;
 
         & > .dropdown-arrow-right {
-          margin-right: 1rem;
-          margin-left: -1rem;
+          margin-right: 1.5rem;
+          margin-left: -1.5rem;
           cursor: pointer;
         }
 
         & > .dropdown-arrow-down {
-          margin-right: 1rem;
-          margin-left: -1rem;
+          margin-right: 1.5rem;
+          margin-left: -1.5rem;
           width: 8px;
           cursor: pointer;
         }
