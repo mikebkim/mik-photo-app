@@ -1,13 +1,13 @@
 import React from "react";
 import { HomePageWrap } from "./Home.Page";
-import Seoul from "./Seoul.jpg";
+import Lofoten11 from "./Lofoten11.jpg";
 
 const HomePage = () => {
   return (
     <HomePageWrap>
       <div className="HomePage">
         <div className="header">
-          <img className="main-image" src={Seoul} alt="Seoul" />
+          <img className="main-image" src={Lofoten11} alt="Lofoten" />
         </div>
         <div className="home">
           Embarking on a visual journey through the lens, my passion for

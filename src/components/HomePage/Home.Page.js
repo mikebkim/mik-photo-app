@@ -7,16 +7,22 @@ export const HomePageWrap = styled.div`
     & > .header {
       & > .main-image {
         width: 100%;
-        max-height: 30rem;
+        height: 40rem;
         object-fit: cover;
       }
     }
 
     & > .home {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 1rem;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem 0.5rem;
+      width: 20rem;
+      color: white;
+      top: 73px;
+      border: 5px solid;
+      padding: 1rem;
     }
   }
 `;

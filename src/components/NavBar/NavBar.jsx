@@ -118,14 +118,14 @@ const NavBar = () => {
             />
           )}
           {dropdownVisible && photosDropdown}
-          <Link
+          {/* <Link
             to="/contact"
             className={
               selectedTab.includes("contact") ? "selected" : "nav-link"
             }
           >
             CONTACT
-          </Link>
+          </Link> */}
         </div>
       </div>
     </NavBarWrap>

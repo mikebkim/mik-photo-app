@@ -14,12 +14,12 @@ export const PhotosPageWrap = styled.div`
     100% {
       opacity: 1;
     }
-    from {
+    /* from {
       width: 0;
     }
     to {
       width: 20rem;
-    }
+    } */
   }
 
   @keyframes opentitle {
@@ -42,7 +42,7 @@ export const PhotosPageWrap = styled.div`
 
     & > .all-photos {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: center;
       margin: 6rem 0;
       flex-wrap: wrap;
 
@@ -61,11 +61,12 @@ export const PhotosPageWrap = styled.div`
 
           & > h2 {
             position: absolute;
-            color: black;
-            text-shadow: -1.2px 1.2px 0 white, 1.2px 1.2px 0 white,
-              1.2px -1.2px 0 white, -1.2px -1.2px 0 white;
-            animation: 2s opentitle;
-            z-index: 0;
+            color: white;
+            /* text-shadow: -1.2px 1.2px 0 white, 1.2px 1.2px 0 white,
+              1.2px -1.2px 0 white, -1.2px -1.2px 0 white; */
+            /* animation: 2s opentitle; */
+            z-index: 1;
+            font-size: 2rem;
           }
 
           & > .photo {
