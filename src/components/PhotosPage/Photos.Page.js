@@ -65,7 +65,7 @@ export const PhotosPageWrap = styled.div`
             /* text-shadow: -1.2px 1.2px 0 white, 1.2px 1.2px 0 white,
               1.2px -1.2px 0 white, -1.2px -1.2px 0 white; */
             /* animation: 2s opentitle; */
-            z-index: 1;
+            z-index: 0;
             font-size: 2rem;
           }
 

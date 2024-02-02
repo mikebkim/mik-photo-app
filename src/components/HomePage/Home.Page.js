@@ -4,6 +4,14 @@ export const HomePageWrap = styled.div`
   .HomePage {
     margin-top: 4rem;
 
+    & > .photo-link {
+      position: absolute;
+      top: 250px;
+      left: 380px;
+      text-decoration: none;
+      color: white;
+    }
+
     & > .header {
       & > .main-image {
         width: 100%;
