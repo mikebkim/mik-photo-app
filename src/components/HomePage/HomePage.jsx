@@ -1,6 +1,6 @@
 import React from "react";
 import { HomePageWrap } from "./Home.Page";
-import Lofoten11 from "./Lofoten11.jpg";
+import Patagonia9 from "./Patagonia9.jpg";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +10,7 @@ const HomePage = () => {
     <HomePageWrap>
       <div className="HomePage">
         <div className="header">
-          <img className="main-image" src={Lofoten11} alt="Lofoten" />
+          <img className="main-image" src={Patagonia9} alt="Lofoten" />
         </div>
         <div className="home">
           Embarking on a visual journey through the lens, my passion for

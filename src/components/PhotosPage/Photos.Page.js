@@ -38,7 +38,7 @@ export const PhotosPageWrap = styled.div`
   }
 
   .PhotosPage {
-    margin-top: 4rem;
+    margin-top: 5rem;
 
     & > .all-photos {
       display: flex;
@@ -64,8 +64,8 @@ export const PhotosPageWrap = styled.div`
             color: white;
             /* text-shadow: -1.2px 1.2px 0 white, 1.2px 1.2px 0 white,
               1.2px -1.2px 0 white, -1.2px -1.2px 0 white; */
-            /* animation: 2s opentitle; */
-            z-index: 0;
+            animation: 2s opentitle;
+            z-index: 1;
             font-size: 2rem;
           }
 
@@ -73,6 +73,7 @@ export const PhotosPageWrap = styled.div`
             width: 20rem;
             height: 20rem;
             cursor: pointer;
+            z-index: 0;
             animation: 2s openphoto;
           }
         }

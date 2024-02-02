@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HomePageWrap = styled.div`
   .HomePage {
-    margin-top: 4rem;
+    margin-top: 5rem;
 
     & > .photo-link {
       position: absolute;

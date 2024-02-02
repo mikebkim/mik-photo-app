@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PhotosSecondaryPageWrap = styled.div`
   .PhotosSecondaryPage {
-    margin-top: 4rem;
+    margin-top: 5rem;
 
     & > .all-photos-secondary {
       display: flex;
