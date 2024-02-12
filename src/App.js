@@ -10,6 +10,7 @@ import HomePage from "./components/HomePage/HomePage";
 import AboutPage from "./components/AboutPage/AboutPage";
 import PhotosPage from "./components/PhotosPage/PhotosPage";
 import PhotosSecondaryPage from "./components/PhotosSecondaryPage/PhotosSecondaryPage";
+import Lofoten12 from "./Lofoten12.jpg";
 
 const App = () => {
   const [password, setPassword] = useState("");
@@ -48,6 +49,9 @@ const App = () => {
 
   return (
     <div className="App">
+      {!isUnlocked ? (
+        <img className="password-image" src={Lofoten12} alt="Lofoten" />
+      ) : null}
       {!isUnlocked ? (
         <div className="password-form">
           <div className="password-input">
