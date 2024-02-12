@@ -1,6 +1,6 @@
 import React from "react";
 import { HomePageWrap } from "./Home.Page";
-import Patagonia9 from "./Patagonia9.jpg";
+import Lofoten12 from "./Lofoten12.jpg";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
@@ -10,9 +10,9 @@ const HomePage = () => {
     <HomePageWrap>
       <div className="HomePage">
         <div className="header">
-          <img className="main-image" src={Patagonia9} alt="Lofoten" />
+          <img className="main-image" src={Lofoten12} alt="Lofoten" />
         </div>
-        <div className="home">
+        {/* <div className="home">
           Embarking on a visual journey through the lens, my passion for
           photography is a boundless exploration of emotion, storytelling, and
           artistry. With every click, I strive to encapsulate the essence of
@@ -23,9 +23,10 @@ const HomePage = () => {
           find joy in the pursuit of capturing beauty, creating a symphony of
           images that echo the heartbeat of my profound love for the art of
           photography.
-        </div>
+        </div> */}
         <Link to="/photos" className="photo-link">
-          EXPLORE <FontAwesomeIcon icon={faCaretRight} />
+          EXPLORE
+          {/* <FontAwesomeIcon icon={faCaretRight} /> */}
         </Link>
       </div>
     </HomePageWrap>

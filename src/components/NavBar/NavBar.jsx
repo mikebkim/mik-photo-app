@@ -91,6 +91,12 @@ const NavBar = () => {
             HOME
           </Link>
           <Link
+            to="/about"
+            className={selectedTab.includes("about") ? "selected" : "nav-link"}
+          >
+            ABOUT
+          </Link>
+          <Link
             to="/photos"
             className={selectedTab.includes("photos") ? "selected" : "nav-link"}
           >
@@ -118,14 +124,6 @@ const NavBar = () => {
             />
           )}
           {dropdownVisible && photosDropdown}
-          {/* <Link
-            to="/contact"
-            className={
-              selectedTab.includes("contact") ? "selected" : "nav-link"
-            }
-          >
-            CONTACT
-          </Link> */}
         </div>
       </div>
     </NavBarWrap>

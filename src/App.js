@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import HomePage from "./components/HomePage/HomePage";
-import ContactPage from "./components/ContactPage/ContactPage";
+import AboutPage from "./components/AboutPage/AboutPage";
 import PhotosPage from "./components/PhotosPage/PhotosPage";
 import PhotosSecondaryPage from "./components/PhotosSecondaryPage/PhotosSecondaryPage";
 
@@ -31,6 +31,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Navigate replace to="/home" />} />
           <Route exact path="/home" element={<HomePage />} />
+          <Route exact path="/about" element={<AboutPage />} />
           <Route
             exact
             path="/photos"
@@ -61,7 +62,6 @@ const App = () => {
             path="/photos/seoul"
             element={<PhotosSecondaryPage allPhotos={allPhotos} />}
           />
-          <Route exact path="/contact" element={<ContactPage />} />
         </Routes>
       </Router>
     </div>

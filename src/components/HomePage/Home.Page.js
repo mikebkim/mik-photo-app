@@ -2,34 +2,34 @@ import styled from "styled-components";
 
 export const HomePageWrap = styled.div`
   .HomePage {
+    min-height: 100vh;
     margin-top: 5rem;
 
     & > .photo-link {
       position: absolute;
-      top: 250px;
-      left: 380px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-decoration: none;
       color: white;
+      font-size: 4rem;
+      font-weight: bolder;
     }
 
     & > .header {
       & > .main-image {
+        position: relative;
         width: 100%;
-        height: 40rem;
-        object-fit: cover;
+        height: 100vh; /* Adjust as needed */
       }
     }
 
     & > .home {
-      position: absolute;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 1rem 0.5rem;
-      width: 20rem;
-      color: white;
-      top: 73px;
-      border: 5px solid;
+      margin: 0rem 1rem;
+      color: black;
       padding: 1rem;
     }
   }
