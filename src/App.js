@@ -10,15 +10,12 @@ import HomePage from "./components/HomePage/HomePage";
 import AboutPage from "./components/AboutPage/AboutPage";
 import PhotosPage from "./components/PhotosPage/PhotosPage";
 import PhotosSecondaryPage from "./components/PhotosSecondaryPage/PhotosSecondaryPage";
-import Lofoten12 from "./Lofoten12.jpg";
+import Patagonia4 from "./Patagonia4.jpg";
 
 const App = () => {
   const [password, setPassword] = useState("");
   const [isUnlocked, setIsUnlocked] = useState(false);
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
+  const [isError, setIsError] = useState(false);
 
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
@@ -26,12 +23,18 @@ const App = () => {
     }
   };
 
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+    setIsError(false); // Reset error message when password is changed
+  };
+
   const unlockPage = () => {
     // Check if the password is correct
     if (password === "G1oriou$") {
       setIsUnlocked(true);
     } else {
-      alert("Incorrect password. Please try again.");
+      setIsUnlocked(false);
+      setIsError(true); // Set error message to be displayed
     }
   };
 
@@ -50,8 +53,14 @@ const App = () => {
   return (
     <div className="App">
       {!isUnlocked ? (
-        <img className="password-image" src={Lofoten12} alt="Lofoten" />
+        <img className="password-image" src={Patagonia4} alt="Lofoten" />
       ) : null}
+      {isError && (
+        <div className="error-message">
+          <span>Incorrect password</span>
+          <span>Please try again</span>
+        </div>
+      )}
       {!isUnlocked ? (
         <div className="password-form">
           <div className="password-input">
