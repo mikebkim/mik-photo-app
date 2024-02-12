@@ -19,6 +19,12 @@ const App = () => {
     setPassword(e.target.value);
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      unlockPage();
+    }
+  };
+
   const unlockPage = () => {
     // Check if the password is correct
     if (password === "G1oriou$") {
@@ -51,6 +57,7 @@ const App = () => {
               placeholder="Enter password"
               value={password}
               onChange={handlePasswordChange}
+              onKeyDown={handleKeyPress}
             />
             <button className="password-button" onClick={unlockPage}>
               Unlock
