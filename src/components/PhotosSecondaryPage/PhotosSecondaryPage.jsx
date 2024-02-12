@@ -3,7 +3,7 @@ import { PhotosSecondaryPageWrap } from "./Photos.Secondary.Page";
 import PhotoModal from "../PhotoModal/PhotoModal";
 import { useLocation } from "react-router-dom";
 
-const PhotosSecondaryPage = ({ allPhotos, selectedLocation }) => {
+const PhotosSecondaryPage = ({ allPhotos }) => {
   // Access the current location object
   const location = useLocation();
 
