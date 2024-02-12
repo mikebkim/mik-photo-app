@@ -36,7 +36,7 @@ export const PhotosPageWrap = styled.div`
 
     & > .all-photos {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       margin: 6rem 0;
       flex-wrap: wrap;
 
