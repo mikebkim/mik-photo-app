@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const PhotosSecondaryPageWrap = styled.div`
   .PhotosSecondaryPage {
+    height: 100vh;
     margin-top: 5rem;
 
     & > .all-photos-secondary {

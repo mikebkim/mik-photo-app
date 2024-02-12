@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const AboutPageWrap = styled.div`
   .AboutPage {
+    height: 100vh;
     margin-top: 5rem;
 
     & > .main-image {
@@ -11,13 +12,22 @@ export const AboutPageWrap = styled.div`
     }
 
     & > .about {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       position: absolute;
-      top: 20%;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-decoration: none;
       color: white;
-      font-size: 1rem;
+      font-size: 4rem;
+      font-weight: bolder;
+
+      & > span:nth-child(2) {
+        font-size: 2rem;
+        margin: 1rem auto;
+      }
     }
   }
 `;
