@@ -14,13 +14,19 @@ export const HomePageWrap = styled.div`
       color: white;
       font-size: 4rem;
       font-weight: bolder;
+      transition: 350ms ease-in-out;
+
+      &:hover {
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        transition: 350ms ease-in-out;
+      }
     }
 
     & > .header {
       & > .main-image {
         position: relative;
         width: 100%;
-        height: 100vh; /* Adjust as needed */
+        height: 100vh;
       }
     }
 

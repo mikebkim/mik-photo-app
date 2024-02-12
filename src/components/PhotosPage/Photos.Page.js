@@ -14,12 +14,6 @@ export const PhotosPageWrap = styled.div`
     100% {
       opacity: 1;
     }
-    /* from {
-      width: 0;
-    }
-    to {
-      width: 20rem;
-    } */
   }
 
   @keyframes opentitle {
@@ -58,12 +52,11 @@ export const PhotosPageWrap = styled.div`
           align-items: center;
           margin: 1rem;
           cursor: pointer;
+          transition: 350ms ease-in-out;
 
           & > h2 {
             position: absolute;
             color: white;
-            /* text-shadow: -1.2px 1.2px 0 white, 1.2px 1.2px 0 white,
-              1.2px -1.2px 0 white, -1.2px -1.2px 0 white; */
             animation: 2s opentitle;
             z-index: 1;
             font-size: 2rem;
@@ -75,6 +68,11 @@ export const PhotosPageWrap = styled.div`
             cursor: pointer;
             z-index: 0;
             animation: 2s openphoto;
+          }
+
+          &:hover {
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            transition: 350ms ease-in-out;
           }
         }
       }

@@ -1,13 +1,12 @@
 import React from "react";
-// import React, { useState } from "react";
 import { AboutPageWrap } from "./About.Page";
+import Seoul from "./Seoul.jpg";
 
 const AboutPage = () => {
-  // const [nameInput, setNameInput] = useState("");
-
   return (
     <AboutPageWrap>
       <div className="AboutPage">
+        <img className="main-image" src={Seoul} alt="Seoul" />
         <div className="about">
           Embarking on a visual journey through the lens, my passion for
           photography is a boundless exploration of emotion, storytelling, and

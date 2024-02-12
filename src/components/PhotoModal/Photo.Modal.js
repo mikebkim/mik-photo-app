@@ -21,9 +21,8 @@ export const PhotoModalWrap = styled.div`
       margin: 0 auto;
 
       & > .photo-pop {
-        /* width: 90%; */
         margin: 1rem;
-        height: 90%;
+        height: 100%;
         object-fit: contain;
       }
 
