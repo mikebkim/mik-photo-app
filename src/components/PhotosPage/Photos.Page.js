@@ -5,26 +5,32 @@ export const PhotosPageWrap = styled.div`
     0% {
       opacity: 0;
     }
-    25% {
-      opacity: 0.5;
+    10% {
+      opacity: 0.1;
+    }
+    20% {
+      opacity: 0.2;
+    }
+    30% {
+      opacity: 0.3;
+    }
+    40% {
+      opacity: 0.4;
     }
     50% {
-      opacity: 0.8;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes opentitle {
-    0% {
-      opacity: 0;
-    }
-    25% {
       opacity: 0.5;
     }
-    50% {
+    60% {
+      opacity: 0.6;
+    }
+    70% {
+      opacity: 0.7;
+    }
+    80% {
       opacity: 0.8;
+    }
+    90% {
+      opacity: 0.9;
     }
     100% {
       opacity: 1;
@@ -57,7 +63,7 @@ export const PhotosPageWrap = styled.div`
           & > h2 {
             position: absolute;
             color: white;
-            animation: 2s opentitle;
+            animation: 500ms openphoto;
             z-index: 1;
             font-size: 2rem;
           }
@@ -67,7 +73,7 @@ export const PhotosPageWrap = styled.div`
             height: 20rem;
             cursor: pointer;
             z-index: 0;
-            animation: 2s openphoto;
+            animation: 500ms openphoto;
           }
 
           &:hover {

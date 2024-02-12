@@ -66,7 +66,7 @@ const App = () => {
         <div className="password-form">
           <div className="password-input">
             <input
-              className="text-input"
+              className={isError ? "text-input-error" : "text-input"}
               type="password"
               placeholder="Enter password"
               value={password}
