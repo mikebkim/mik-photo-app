@@ -33,6 +33,7 @@ const App = () => {
     if (password === "G1oriou$") {
       setIsUnlocked(true);
     } else {
+      setPassword("");
       setIsUnlocked(false);
       setIsError(true); // Set error message to be displayed
     }
