@@ -43,6 +43,7 @@ export const NavBarWrap = styled.div`
       align-items: center;
       margin: 1rem;
       letter-spacing: 0.2rem;
+      text-wrap: nowrap;
     }
 
     & > .nav-links {

@@ -70,6 +70,7 @@ const App = () => {
               type="password"
               placeholder="Enter password"
               value={password}
+              autoFocus
               onChange={handlePasswordChange}
               onKeyDown={handleKeyPress}
             />
