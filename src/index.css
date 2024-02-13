@@ -91,7 +91,7 @@ code {
     color: white;
     text-align: center;
     font-size: 2rem;
-    width: 10rem;
+    width: 12rem;
     letter-spacing: 0.2rem;
 
     &::placeholder {
