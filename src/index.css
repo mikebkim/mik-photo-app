@@ -123,7 +123,7 @@ code {
 .password-button {
   appearance: button;
   backface-visibility: hidden;
-  background-color: rgb(151, 154, 170);
+  background-color: rgb(38, 39, 28);
   border-radius: 6px;
   border-width: 0;
   box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
@@ -145,6 +145,6 @@ code {
   font-size: 14px;
 
   &:hover {
-    background-color: rgb(119, 166, 195);
+    background-color: rgb(207, 115, 1);
   }
 }
