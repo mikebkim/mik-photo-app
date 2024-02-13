@@ -95,6 +95,7 @@ export const NavBarWrap = styled.div`
         margin-right: 1.5rem;
         color: black;
         letter-spacing: 0.2rem;
+        white-space: nowrap;
       }
 
       & > .selected {
@@ -102,6 +103,7 @@ export const NavBarWrap = styled.div`
         margin-right: 1.5rem;
         color: grey;
         letter-spacing: 0.2rem;
+        white-space: nowrap;
 
         & > .dropdown-arrow-right {
           margin-right: 1.5rem;

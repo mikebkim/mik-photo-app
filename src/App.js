@@ -65,10 +65,10 @@ const App = () => {
       {!isUnlocked ? (
         <div className="password-form">
           <div className="password-input">
+            ENTER PASSWORD
             <input
               className={isError ? "text-input-error" : "text-input"}
               type="password"
-              placeholder="Enter password"
               value={password}
               autoFocus
               onChange={handlePasswordChange}

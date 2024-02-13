@@ -11,8 +11,7 @@ export const PhotosSecondaryPageWrap = styled.div`
       align-items: center;
       font-size: 4rem;
       letter-spacing: 0.2rem;
-      font-weight: 500;
-      border-bottom: 2px solid black;
+      padding-top: 1rem;
     }
 
     & > .all-photos-secondary {

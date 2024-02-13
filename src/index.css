@@ -75,23 +75,29 @@ code {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: white;
+  margin-top: 1rem;
+  letter-spacing: 0.2rem;
 
   .text-input {
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
-    border-bottom: 2px solid white;
+    border-bottom: 3px solid white;
     background-color: transparent;
     text-decoration: none;
     outline: none;
     color: white;
     text-align: center;
+    font-size: 2rem;
+    width: 10rem;
+    letter-spacing: 0.2rem;
 
     &::placeholder {
       color: white;
       font-weight: bold;
-      font-size: 12px;
+      font-size: 1rem;
       text-align: center;
       width: 100%;
     }
@@ -102,18 +108,21 @@ code {
     justify-content: center;
     align-items: center;
     border: none;
-    border-bottom: 2px solid white;
+    border-bottom: 3px solid white;
     background-color: transparent;
     text-decoration: none;
     outline: none;
     color: white;
     text-align: center;
+    font-size: 2rem;
+    width: 10rem;
     animation: shake 0.5s;
+    letter-spacing: 0.2rem;
 
     &::placeholder {
       color: white;
       font-weight: bold;
-      font-size: 12px;
+      font-size: 1rem;
       text-align: center;
       width: 100%;
     }
@@ -123,7 +132,7 @@ code {
 .password-button {
   appearance: button;
   backface-visibility: hidden;
-  background-color: rgb(38, 39, 28);
+  background-color: rgb(131, 59, 2);
   border-radius: 6px;
   border-width: 0;
   box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
@@ -133,7 +142,7 @@ code {
   cursor: pointer;
   height: 2rem;
   width: 5rem;
-  margin: 12px 0 0;
+  margin: 1rem;
   outline: none;
   position: relative;
   text-align: center;
@@ -142,9 +151,9 @@ code {
   user-select: none;
   touch-action: manipulation;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 1rem;
 
   &:hover {
-    background-color: rgb(207, 115, 1);
+    background-color: rgb(90, 115, 144);
   }
 }
