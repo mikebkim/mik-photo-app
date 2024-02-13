@@ -10,6 +10,10 @@ const PhotosSecondaryPage = ({ allPhotos }) => {
   // Access specific properties of the location object
   const { pathname } = location;
 
+  const regex = /\/([^/]+)\/([^/]+)/;
+  const pathTitle = pathname.match(regex);
+
+  console.log("🚀 ~ PhotosSecondaryPage ~ location:", location);
   const [openPhotoModal, setOpenPhotoModal] = useState(false);
   const handleOpenPhotoModal = (photoData) => {
     setSelectedPhoto(photoData);
@@ -26,6 +30,7 @@ const PhotosSecondaryPage = ({ allPhotos }) => {
   return (
     <PhotosSecondaryPageWrap>
       <div className="PhotosSecondaryPage">
+        <div className="location-title">{pathTitle[2].toUpperCase()}</div>
         <div className="all-photos-secondary">
           {filteredPhotos.map((photo) => {
             const photoData = photo[1];

@@ -24,6 +24,10 @@ export const AboutPageWrap = styled.div`
       font-size: 4rem;
       font-weight: bolder;
 
+      & > span {
+        letter-spacing: 0.2rem;
+      }
+
       & > span:nth-child(2) {
         font-size: 2rem;
         margin: 1rem auto;

@@ -67,6 +67,7 @@ export const PhotosPageWrap = styled.div`
             animation: 500ms openphoto;
             z-index: 1;
             font-size: 2rem;
+            letter-spacing: 0.2rem;
           }
 
           & > .photo {

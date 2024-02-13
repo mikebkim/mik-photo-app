@@ -5,6 +5,16 @@ export const PhotosSecondaryPageWrap = styled.div`
     min-height: 100vh;
     margin-top: 5rem;
 
+    & > .location-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 4rem;
+      letter-spacing: 0.2rem;
+      font-weight: 500;
+      border-bottom: 2px solid black;
+    }
+
     & > .all-photos-secondary {
       display: flex;
       justify-content: space-evenly;

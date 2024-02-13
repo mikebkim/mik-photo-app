@@ -15,6 +15,7 @@ export const HomePageWrap = styled.div`
       font-size: 4rem;
       font-weight: bolder;
       transition: 350ms ease-in-out;
+      letter-spacing: 0.2rem;
 
       &:hover {
         text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
