@@ -90,9 +90,10 @@ code {
     outline: none;
     color: white;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     width: 12rem;
     letter-spacing: 0.2rem;
+    padding: 0.5rem 0;
 
     &::placeholder {
       color: white;
@@ -114,10 +115,11 @@ code {
     outline: none;
     color: white;
     text-align: center;
-    font-size: 2rem;
-    width: 10rem;
-    animation: shake 0.5s;
+    font-size: 1.5rem;
+    width: 12rem;
     letter-spacing: 0.2rem;
+    padding: 0.5rem 0;
+    animation: shake 0.5s;
 
     &::placeholder {
       color: white;
