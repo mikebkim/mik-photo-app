@@ -38,6 +38,7 @@ export const PhotosPageWrap = styled.div`
   }
 
   .PhotosPage {
+    min-height: 100vh;
     margin-top: 5rem;
 
     & > .all-photos {

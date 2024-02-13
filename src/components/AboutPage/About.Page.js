@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const AboutPageWrap = styled.div`
   .AboutPage {
-    height: 100vh;
+    min-height: 100vh;
     margin-top: 5rem;
 
     & > .main-image {
