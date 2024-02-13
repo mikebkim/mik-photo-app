@@ -19,7 +19,7 @@ const AboutPage = () => {
           images that echo the heartbeat of my profound love for the art of
           photography. */}
           <span>SEANNA KIM</span>
-          <span>Photographer</span>
+          <span>Photography</span>
         </div>
       </div>
     </AboutPageWrap>
