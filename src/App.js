@@ -30,7 +30,7 @@ const App = () => {
 
   const unlockPage = () => {
     // Check if the password is correct
-    if (password === "G1oriou$") {
+    if (password === "G1oriou$!") {
       setIsUnlocked(true);
     } else {
       setPassword("");
